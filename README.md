@@ -1,7 +1,7 @@
 ### 1\. Clone this Repository
 
 ```bash
-git clone https://github.com/surjithctly/nextly-template.git
+git clone https:
 ```
 
 ### 2\. Install dependencies
