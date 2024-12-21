@@ -36,21 +36,21 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "pregunta 1?",
+    answer: "respuesta 1",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "pregunta 2?",
+    answer: "respuesta 2",
   },
   {
-    question: "What is your refund policy? ",
+    question: "pregunta 3",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "respuesta 3",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "pregunta 4",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "respuesta 4",
   },
 ];

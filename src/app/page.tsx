@@ -27,11 +27,9 @@ export default function Home() {
       <SectionTitle
         id = "servicios"
         preTitle="Servicios"
-        title="Learn how to fullfil your needs"
+        title="titulo de servicios"
       >
-         hola This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+         descripcion de los servicios que ofrecemos
       </SectionTitle>
 
       <Video videoId="fZ0D0cnR88E" />
@@ -39,17 +37,15 @@ export default function Home() {
       <SectionTitle
         id = "trabajos"
         preTitle="Trabajos"
-        title="Here's what our customers said"
+        title="titulo de trabajos"
       >
-        Testimonials is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        descripcion de los trabajos realizados
       </SectionTitle>
 
       <Testimonials />
 
       <SectionTitle preTitle="FAQ" title="Preguntas Frecuentes">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+        descripcion de las preguntas frecuentes
       </SectionTitle>
 
       <Faq />
