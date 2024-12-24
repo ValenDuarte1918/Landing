@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 import benefitOneImg from "../../public/img/Imagen.png";
-import benefitTwoImg from "../../public/img/benefit-two.png";
+import newIcon from "../../public/img/free_icon_1.svg";
 
 const benefitOne = {
   title: "Soluciones a Medida para Cada Desafío",
@@ -18,7 +18,7 @@ const benefitOne = {
     {
       title: "Transformamos Tus Ideas en Resultados Concretos",
       desc: "Nuestro equipo de profesionales altamente capacitados y con amplia experiencia en el rubro, se encargará de brindarte la solución que necesitas para tu proyecto.",
-      icon: <FaceSmileIcon />,
+      icon: < img src={newIcon} alt = "Nuevo"/>,
     },
     {
       title: "Especialistas en Tratamiento de Superficies",
@@ -32,8 +32,5 @@ const benefitOne = {
     },
   ],
 };
-
-
-
 
 export {benefitOne};

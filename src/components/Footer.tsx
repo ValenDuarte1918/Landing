@@ -4,7 +4,12 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["Inicio", "Nosotros", "Servicios", "Preguntas Frecuentes"];
+  const navigation = [
+    { name: "Inicio", id: "inicio" },
+    { name: "Nosotros", id: "nosotros" },
+    { name: "Servicios", id: "servicios" },
+    { name: "Trabajos", id: "trabajos" },
+  ];
   const legal = ["Terminios y condiciones", "Privacidad", "Legal"];
   return (
     <div className="relative">
@@ -39,10 +44,10 @@ export function Footer() {
               {navigation.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={`#${item.id}`}
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </div>
