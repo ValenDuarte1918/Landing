@@ -36,21 +36,21 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "pregunta 1?",
-    answer: "respuesta 1",
+    question: "¿Cómo puede el granallado ayudar a eliminar la corrosión de mis piezas?",
+    answer: "El granallado es un proceso eficaz para remover óxido, corrosión y otros contaminantes de las superficies metálicas, dejando la pieza limpia y lista para ser tratada o pintada.",
   },
   {
-    question: "pregunta 2?",
-    answer: "respuesta 2",
+    question: "¿Por qué es importante preparar la superficie antes de aplicar pintura o recubrimientos?",
+    answer: "La preparación de la superficie mediante granallado garantiza una mejor adhesión de la pintura o recubrimiento, aumentando su durabilidad y resistencia.",
   },
   {
-    question: "pregunta 3",
+    question: "¿Qué significa “volver a darle valor a mi pieza”?",
     answer:
-      "respuesta 3",
+      "Mediante el proceso de granallado o blasting, tus piezas recuperan su apariencia original, mejorando su funcionalidad y estética, lo que prolonga su vida útil.",
   },
   {
-    question: "pregunta 4",
+    question: "¿Cómo el blasting puede mejorar la presentación de mis trabajos?",
     answer:
-      "respuesta 4",
+      "El blasting permite obtener una superficie uniforme y limpia, ideal para proyectos que requieren acabados profesionales y de alta calidad.",
   },
 ];

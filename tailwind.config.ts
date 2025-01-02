@@ -19,6 +19,9 @@ const config: Config = {
         customBlue: "#003871",
         btn: "#2678b8",
       },
+      filter: {
+        black: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)', 
+      },
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
@@ -32,6 +35,8 @@ const config: Config = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 };
 export default config;
