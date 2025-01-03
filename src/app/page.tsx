@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, {Suspense} from "react";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -8,6 +8,8 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 
 import { benefitOne } from "@/components/data";
+
+
 export default function Home() {
   return (
     <Container>
@@ -34,7 +36,7 @@ export default function Home() {
       <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3 ">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-11 rounded-2xl py-14 dark:bg-trueGray-800">
             <h1 className="text-2xl leading-normal text-center">
               Granallado 
             </h1>
@@ -46,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-11 rounded-2xl py-14 dark:bg-trueGray-800">
           <h1 className="text-2xl leading-normal text-center">
               Blasting
             </h1>
@@ -58,7 +60,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-11 rounded-2xl py-14 dark:bg-trueGray-800">
           <h1 className="text-2xl leading-normal text-center">
               Zincado
             </h1>
