@@ -1,14 +1,8 @@
-import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
-  CursorArrowRaysIcon,
-  DevicePhoneMobileIcon,
-  AdjustmentsHorizontalIcon,
-  SunIcon,
-} from "@heroicons/react/24/solid";
+import { ChartBarSquareIcon,} from "@heroicons/react/24/solid";
+import { FaLightbulb } from "react-icons/fa";
+import { BsStars } from "react-icons/bs";
 
 import benefitOneImg from "../../public/img/Imagen.png";
-import newIcon from "../../public/img/free_icon_1.svg";
 
 const benefitOne = {
   title: "Soluciones a Medida para Cada Desafío",
@@ -18,17 +12,17 @@ const benefitOne = {
     {
       title: "Transformamos Tus Ideas en Resultados Concretos",
       desc: "Nuestro equipo de profesionales altamente capacitados y con amplia experiencia en el rubro, se encargará de brindarte la solución que necesitas para tu proyecto.",
-      icon: < img src={newIcon} alt = "Nuevo"/>,
+      icon: <FaLightbulb />,
     },
     {
       title: "Especialistas en Tratamiento de Superficies",
       desc: " Contamos con la tecnología y los conocimientos necesarios para brindarte un servicio de calidad y a la altura de tus expectativas.",
-      icon: <ChartBarSquareIcon />,
+      icon: <BsStars />,
     },
     {
       title: "Innovación y Calidad para Tu Negocio",
       desc: " En Arenados y Blasting, trabajamos con los más altos estándares de calidad y seguridad para garantizar la satisfacción de nuestros clientes.",
-      icon: <CursorArrowRaysIcon />,
+      icon: <ChartBarSquareIcon />,
     },
   ],
 };

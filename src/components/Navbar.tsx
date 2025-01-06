@@ -33,7 +33,6 @@ export const Navbar = () => {
 
         {/* Boton de contacto */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2 hover:animate-jump animate-once">
-          <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
             <Link href="https://wa.link/lf75ot" className="px-6 py-2 text-white bg-btn rounded-md md:ml-5">
               Contactenos
