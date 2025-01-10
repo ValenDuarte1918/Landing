@@ -13,8 +13,8 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="w-full fixed top-0 z-50 animate-fade-right animate-once animate-duration-[1700ms]">
-      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-1 bg-customBlue bg-opacity-80">
+    <div className="w-full h-1 fixed z-50 animate-fade-right animate-once animate-duration-[1700ms]">
+      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-1 bg-customBlue bg-opacity-50">
         {/* Logo  */}
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-white dark:text-gray-100">

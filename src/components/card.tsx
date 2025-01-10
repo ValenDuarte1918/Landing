@@ -9,7 +9,7 @@ import { Carousel, Card } from "@/components/apple-cards-carousel";
   ));
 
   return (
-    <div className="w-full h-full py-20 items-center justify-center text-center">
+    <div className="w-full h-full  items-center justify-center text-center">
       <Carousel items={cards} />
     </div>
   );
@@ -51,19 +51,19 @@ const data = [
   {
     category: " ",
     title: "Granallado",
-    src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/img/imgGranallado.jpg",
     content: <DummyContent />,
   },
   {
     category: "",
     title: "Blasting",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/img/6.jpg",
     content: <DummyContent />,
   },
   {
     category: "",
     title: "Zincado",
-    src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/img/1.jpg",
     content: <DummyContent />,
   },
 
