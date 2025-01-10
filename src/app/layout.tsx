@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="!scroll-smooth"  suppressHydrationWarning>
-      <body className={montserrat.className}>
+      <body className={`${montserrat.className} bg-snow`}>
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>
