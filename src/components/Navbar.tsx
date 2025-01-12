@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
@@ -13,18 +12,18 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-1 fixed z-50 animate-fade-right animate-once animate-duration-[1700ms]">
-      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-1 bg-customBlue bg-opacity-50">
+    <div className="w-full fixed z-50 animate-fade-right animate-once animate-duration-[1700ms]">
+      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between  xl:px-1 bg-customBlue bg-opacity-50 h-16">
         {/* Logo  */}
         <Link href="/">
-          <span className="flex items-center space-x-2 text-2xl font-medium text-white dark:text-gray-100">
+          <span className="flex items-center space-x-2 text-2xl font-medium text-white">
             <span>
               <Image
                 src="/img/foto-logo.png"
                 width="100"
                 alt="N"
                 height="100"
-                className="w-20 h-20 ml-6 rounded-full "
+                className="w-12 h-12 ml-6 rounded-full"
               />
             </span>
             <span>Arenados y Blasting</span>
@@ -48,7 +47,7 @@ export const Navbar = () => {
                 className="lg:hidden focus:outline-none"
               >
                 <svg
-                  className="w-6 h-6 fill-current"
+                  className="w-6 h-6 fill-current text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -74,7 +73,7 @@ export const Navbar = () => {
                     <Link
                       key={index}
                       href={`#${menu.id}`}
-                      className="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                      className="block px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
                     >
                       {menu.name}
                     </Link>
@@ -93,10 +92,10 @@ export const Navbar = () => {
 
         {/* menu  */}
         <div className="hidden text-center lg:flex lg:items-center w-1/2 ">
-          <ul className="items-center justify-around flex-1 pt-6 list-none lg:pt-0 lg:flex ">
+          <ul className="items-center justify-around flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item " key={index}>
-                <Link href={`#${menu.id}`} className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800 animate-fade-right ">
+                <Link href={`#${menu.id}`} className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:outline-none">
                   {menu.name}
                 </Link>
               </li>

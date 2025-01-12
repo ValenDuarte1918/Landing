@@ -174,7 +174,6 @@ export const Card = ({
     setOpen(false);
     onCardClose(index);
   };
-
   return (
     <>
       <AnimatePresence>

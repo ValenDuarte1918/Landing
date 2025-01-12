@@ -14,6 +14,12 @@ const config: Config = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      textDecorationThickness: {
+        'thick': '2px', // Ajusta el grosor según tus necesidades
+      },
+      padding: {
+        '2': '0.5rem', // Ajusta el padding según tus necesidades
+      },
       colors: {
         trueGray: colors.neutral,
         customBlue: "#003871",

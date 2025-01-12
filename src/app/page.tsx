@@ -7,7 +7,6 @@ import { Benefits } from "@/components/Benefits";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import AppleCardsCarouselDemo from "@/components/card";
-import { Carousel, Card } from "@/components/apple-cards-carousel";
 
 import { benefitOne } from "@/components/data";
 
@@ -67,7 +66,10 @@ export default function Home() {
           loading="lazy"
         ></iframe>
       </div>
-      <SectionTitle preTitle="FAQ" title="Preguntas Frecuentes">
+      <SectionTitle 
+      id= "faq"
+      preTitle="FAQ" 
+      title="Preguntas Frecuentes">
       Estas son algunas de las preguntas frecuentes que recibimos de nuestros clientes. 
       Si tienes alguna otra pregunta, no dudes en contactarnos! 
       </SectionTitle>
