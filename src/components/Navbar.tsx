@@ -9,6 +9,7 @@ export const Navbar = () => {
     { name: "Nosotros", id: "nosotros" },
     { name: "Servicios", id: "servicios" },
     { name: "Trabajos", id: "trabajos" },
+    { name: "Ubicación", id: "ubicacion" },
   ];
 
   return (

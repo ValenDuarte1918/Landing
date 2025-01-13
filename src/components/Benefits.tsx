@@ -21,14 +21,14 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
   return (
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap animate-fade-up animate-once animate-duration-[1700ms]">
         <div
-          className={`flex items-center justify-center w-full lg:w-1/2 ${
+          className={`flex items-center justify-center w-full ml-8 lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}>
           <div>
             <Image
               src={data.image}
-              width={521}
-              height={521}
+              width={800}
+              height={800}
               alt="Benefits"
               className={"object-cover"}
               placeholder="blur"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
@@ -11,6 +12,7 @@ import { PopupWidget }  from "@/components/PopupWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Arenados y Blasting",
@@ -24,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="!scroll-smooth"  suppressHydrationWarning>
-      <body className={`${montserrat.className} bg-snow`}>
+      <body className={`${manrope.className} bg-snow`}>
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>

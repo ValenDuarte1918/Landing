@@ -7,6 +7,7 @@ import { Benefits } from "@/components/Benefits";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import AppleCardsCarouselDemo from "@/components/card";
+import Link from "next/link";
 
 import { benefitOne } from "@/components/data";
 
@@ -19,6 +20,8 @@ export default function Home() {
         id = "nosotros"
         preTitle="Sobre Nosotros"
         title=" Enfocados en la calidad y el servicio"
+        className=""
+        
       >
         Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
         brindando servicios de excelente calidad y con la mejor atencion al cliente.
@@ -32,7 +35,10 @@ export default function Home() {
         preTitle="Servicios"
         title="Nuestros Servicios"
       >
-         Ofrecemos una amplia gama de servicios como: 
+         Brindamos soluciones integrales para el tratamiento y cuidado de superficies metálicas. 
+         Ofrecemos una amplia gama de servicios diseñados 
+         para satisfacer las necesidades de diversos proyectos, desde limpieza profunda hasta acabados mas detallado 
+         de alta calidad. 
       </SectionTitle>
       
       <Container>
@@ -44,27 +50,38 @@ export default function Home() {
         preTitle="Trabajos"
         title="Nuestros Trabajos"
       >
-      Te mostramos algunos de nuestros trabajos y proyectos realizados con el mayor cuidado y dedicación.
+      Descubra algunos de los proyectos que hemos realizado con precisión y dedicación. Cada trabajo refleja 
+      nuestro compromiso con la calidad y el detalle, garantizando resultados que superan las expectativas de 
+      nuestros clientes.
       </SectionTitle>
 
       <Testimonials />
 
-      <SectionTitle
-        id = "ubicacion"
-        preTitle="Ubicación"
-        title="Donde Estamos"
-      >
-      Estamos ubicados en la ciudad de Buenos Aires, Argentina.
-      </SectionTitle>
-      <div className="flex flex-col items-center justify-center w-full h-full">
-      <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.35591504147695!2d-58.66728186614326!3d-34.561286108999916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd75b953ab7f%3A0x3da2356c1cd88ef4!2sArenados%20y%20blasting!5e0!3m2!1ses-419!2sar!4v1735069880782!5m2!1ses-419!2sar"
-          width="90%"
-          height="500"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
+<div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image bg-cover bg-center bg-fixed">
+        <div className="flex flex-col items-start justify-center w-full h-full bg-white bg-opacity-70 rounded-lg p-4 md:flex-row md:p-8">
+          <div className="flex flex-col items-start justify-center w-full md:w-1/2 p-4">
+            <SectionTitle
+              id="ubicacion"
+              preTitle="¿En que podemos ayudarte?"
+              title="Si tienes alguna consulta o inquietud, no dudes en contactarnos."
+            >
+              Horarios de atención:
+              Lunes a viernes de 9 a 18:00
+            </SectionTitle>
+            <div className="mt-4 md:mt-8 flex justify-center w-full">
+              <Link href="https://wa.link/lf75ot" className="px-6 py-2 text-white bg-btn rounded-md hover:animate-jump animate-once">
+                Contactenos
+              </Link>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.35591504147695!2d-58.66728186614326!3d-34.561286108999916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd75b953ab7f%3A0x3da2356c1cd88ef4!2sArenados%20y%20blasting!5e0!3m2!1ses-419!2sar!4v1735069880782!5m2!1ses-419!2sar"
+            className="w-full h-64 md:w-1/2 md:h-full"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
       <SectionTitle 
       id= "faq"

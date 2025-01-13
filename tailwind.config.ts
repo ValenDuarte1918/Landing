@@ -1,4 +1,4 @@
-import { Montserrat } from "next/font/google";
+import { Manrope, Montserrat, Ubuntu } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const defaultTheme = require("tailwindcss/defaultTheme");
@@ -23,6 +23,7 @@ const config: Config = {
       colors: {
         trueGray: colors.neutral,
         customBlue: "#003871",
+        customRed: "#def0f6",
         snow: "#fbf5f3ff",
         davysGray: "#545863ff",
         btn: "#2678b8",
@@ -35,10 +36,27 @@ const config: Config = {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
       stock: [defaultTheme.fontFamily.sans],
       Montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      Manropes: ["Manrope", ...defaultTheme.fontFamily.sans],
+      Ubuntu: ["Ubuntu", ...defaultTheme.fontFamily.sans],
     },
     backgroundImage: {
       "hero-image": "url('/img/hero2.jpg')",
-    }
+    },
+    fontSize: {
+      xs: ".75rem",
+      sm: ".875rem",
+      base: "1rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "4rem",
+      "7xl": "5rem",
+      "8xl": "6rem",
+      "9xl": "8rem",
+    },
   },
   variants: {
     extend: {},
