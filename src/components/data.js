@@ -1,11 +1,11 @@
 import { ChartBarSquareIcon,} from "@heroicons/react/24/solid";
 import { FaLightbulb } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-
+import Mark from "../app/page";
 import benefitOneImg from "../../public/img/Imagen.png";
 
 const benefitOne = {
-  title: "Soluciones a Medida para Cada Desafío",
+  title: "Soluciones a medida para cada desafío",
   desc: "En Arenados y Blasting, somos expertos en soluciones personalizadas para cada desafío. Nos especializamos en el tratamiento de piezas de todas las dimensiones y complejidades, desde componentes pequeños hasta grandes estructuras",
   image: benefitOneImg,
   bullets: [
@@ -26,5 +26,14 @@ const benefitOne = {
     },
   ],
 };
-
+function Mark(props) {
+  return (
+    <>
+      {" "}
+      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
+        {props.children}
+      </mark>{" "}
+    </>
+  );
+}
 export {benefitOne};

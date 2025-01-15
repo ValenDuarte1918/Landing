@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import heroImg from "../../public/img/hero2.jpg";
+
 
 export const Hero = () => {
   return (
     <>
     
-    <div className="relative h-screen">
+    <div className="relative h-screen w-full">
       <Container className="flex flex-wrap bg-hero-image bg-cover bg-center bg-no-repeat h-full relative">
         <div className="absolute inset-0 bg-black opacity-75 z-10"></div>
         <div className="relative z-20 flex items-center w-full lg:w-1/2 animate-fade-up animate-once">

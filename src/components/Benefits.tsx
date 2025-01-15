@@ -27,10 +27,10 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           <div>
             <Image
               src={data.image}
-              width={800}
-              height={800}
+              width={1000}
+              height={1000}
               alt="Benefits"
-              className={"object-cover"}
+              className={"object-cover rounded-lg shadow-lg w-full h-full lg: rounded-lg lg:shadow-lg lg:w-full lg:h-full lg:object-cover lg:rounded-lg"}
               placeholder="blur"
               blurDataURL={data.image.src}
             />
@@ -40,7 +40,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
         <div
           className={`flex flex-wrap items-center w-full lg:w-1/2 ${
             data.imgPos === "right" ? "lg:justify-end" : ""
-          }`}>
+          }bg-white dark:bg-gray-800 rounded-lg p-8 lg:shadow-lg`}>
           <div>
             <div className="flex flex-col w-full mt-4">
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">

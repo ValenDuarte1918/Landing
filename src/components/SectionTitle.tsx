@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 interface SectionTitleProps {
   id ?: string;
   preTitle?: string;
-  title?: string;
+  title?: React.ReactNode;
   align?: "left" | "center";
   children?: React.ReactNode;
   className?: string;
@@ -15,7 +15,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
     <Container
     id={props.id}
     className={`flex flex-col ${
-      props.id === "nosotros" ? "items-start justify-start text-start p-2 ml-16" : "items-center justify-center text-center p-2"
+      props.id === "nosotros" ? "items-start justify-start text-start py-8 ml-16" : "items-center justify-center text-center py-2"
     } ${props.className}`} // Añadir props.className aquí
   >
   {props.preTitle && (

@@ -24,7 +24,7 @@ const config: Config = {
         trueGray: colors.neutral,
         customBlue: "#003871",
         customRed: "#def0f6",
-        snow: "#fbf5f3ff",
+        snow: "#fbf5f3",
         davysGray: "#545863ff",
         btn: "#2678b8",
       },
@@ -41,6 +41,8 @@ const config: Config = {
     },
     backgroundImage: {
       "hero-image": "url('/img/hero2.jpg')",
+      "hero-image2": "url('/img/imagen-1.jpg')",
+      "card-image": "url('/img/prueba-6.jpg')",
     },
     fontSize: {
       xs: ".75rem",

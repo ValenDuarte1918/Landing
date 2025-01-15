@@ -10,6 +10,7 @@ import AppleCardsCarouselDemo from "@/components/card";
 import Link from "next/link";
 
 import { benefitOne } from "@/components/data";
+import  LayoutGridDemo from "@/components/cardsData";
 
 
 export default function Home() {
@@ -19,8 +20,12 @@ export default function Home() {
       <SectionTitle
         id = "nosotros"
         preTitle="Sobre Nosotros"
-        title=" Enfocados en la calidad y el servicio"
-        className=""
+        title={
+          <>
+            Enfocados en la <Mark>calidad y el servicio</Mark>
+          </>
+        }
+        className="text-center py-8"
         
       >
         Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
@@ -55,9 +60,9 @@ export default function Home() {
       nuestros clientes.
       </SectionTitle>
 
-      <Testimonials />
+      <LayoutGridDemo />
 
-<div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image bg-cover bg-center bg-fixed">
+<div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image2 bg-cover bg-center bg-fixed">
         <div className="flex flex-col items-start justify-center w-full h-full bg-white bg-opacity-70 rounded-lg p-4 md:flex-row md:p-8">
           <div className="flex flex-col items-start justify-center w-full md:w-1/2 p-4">
             <SectionTitle
@@ -106,7 +111,3 @@ function Mark(props: { readonly children: React.ReactNode }) {
     </>
   );
 }
-
-
-
-
