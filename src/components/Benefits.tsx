@@ -24,13 +24,13 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           className={`flex items-center justify-center w-full ml-8 lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}>
-          <div>
+          <div className="relative flex items-center justify-center w-full h-full lg:h-full ">
             <Image
               src={data.image}
               width={1000}
               height={1000}
               alt="Benefits"
-              className={"object-cover rounded-lg shadow-lg w-full h-full lg: rounded-lg lg:shadow-lg lg:w-full lg:h-full lg:object-cover lg:rounded-lg"}
+              className="object-cover object-center w-full h-full rounded-lg lg:rounded-xl"
               placeholder="blur"
               blurDataURL={data.image.src}
             />
