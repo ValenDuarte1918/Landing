@@ -24,7 +24,7 @@ const config: Config = {
         trueGray: colors.neutral,
         customBlue: "#003871",
         customRed: "#def0f6",
-        snow: "#fbf5f3",
+        snow: "#001211",
         davysGray: "#545863ff",
         btn: "#2678b8",
       },

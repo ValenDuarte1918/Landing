@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="!scroll-smooth"  suppressHydrationWarning>
-      <body className={`${manrope.className} bg-snow`}>
+      <body className={`${manrope.className}`}>
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>

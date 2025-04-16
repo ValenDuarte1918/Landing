@@ -25,7 +25,7 @@ export default function Home() {
             Enfocados en la <Mark>calidad y el servicio</Mark>
           </>
         }
-        className="text-center py-8"
+        className="text-center py-8 bg-snow w-full"
         
       >
         Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
@@ -54,6 +54,7 @@ export default function Home() {
         id = "trabajos"
         preTitle="Trabajos"
         title="Nuestros Trabajos"
+        className="bg-snow"
       >
       Descubra algunos de los proyectos que hemos realizado con precisión y dedicación. Cada trabajo refleja 
       nuestro compromiso con la calidad y el detalle, garantizando resultados que superan las expectativas de 

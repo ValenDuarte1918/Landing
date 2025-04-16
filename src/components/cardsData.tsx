@@ -4,7 +4,7 @@ import  LayoutGrid  from "@/components/layout-grid";
 
 export function LayoutGridDemo() {
   return (
-    <div className="h-screen w-full ">
+    <div className="h-screen w-full bg-snow ">
       <LayoutGrid cards={cards} />
     </div>
   );

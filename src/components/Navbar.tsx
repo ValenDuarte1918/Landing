@@ -108,7 +108,7 @@ export const Navbar = () => {
               </Disclosure.Panel>
             </>
           )}
-        </Disclosure>
+        </Disclosure>npm 
 
         {/* Menú */}
         <div className="hidden text-center lg:flex lg:items-center w-1/2 ">
