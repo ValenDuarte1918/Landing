@@ -21,7 +21,6 @@ export const Navbar = () => {
     { name: "Nosotros", id: "nosotros" },
     { name: "Servicios", id: "servicios" },
     { name: "Trabajos", id: "trabajos" },
-    { name: "Ubicación", id: "ubicacion" },
   ];
 
   return (
@@ -108,7 +107,7 @@ export const Navbar = () => {
               </Disclosure.Panel>
             </>
           )}
-        </Disclosure>npm 
+        </Disclosure>
 
         {/* Menú */}
         <div className="hidden text-center lg:flex lg:items-center w-1/2 ">

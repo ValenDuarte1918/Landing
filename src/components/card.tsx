@@ -9,7 +9,7 @@ import { Carousel, Card } from "@/components/apple-cards-carousel";
   ));
 
   return (
-    <div className="w-full h-full  items-center justify-center text-center">
+    <div className="w-full h-full  items-center justify-center text-center bg-snow2">
       <Carousel items={cards} />
     </div>
   );

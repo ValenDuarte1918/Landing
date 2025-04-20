@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="!scroll-smooth"  suppressHydrationWarning>
+    <html lang="es" className="!scroll-smooth bg-snow"  suppressHydrationWarning>
       <body className={`${manrope.className}`}>
         <ThemeProvider attribute="class">
           <Navbar />

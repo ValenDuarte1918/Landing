@@ -15,7 +15,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
     <Container
     id={props.id}
     className={`flex flex-col ${  //alargar el texto
-      props.id === "nosotros" ? "items-center justify-start text-start py-12 ml-" : "items-center justify-center text-center py-2"
+      props.id === "nosotros" ? "items-center justify-start text-start py-16 bg-gradient-custom1 " : "items-center justify-center text-center py-16"
     } ${props.className}`} // Añadir props.className aquí
   >
   {props.preTitle && (
@@ -29,7 +29,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
       className={`${
         props.id === "ubicacion"
           ? "max-w-sm mt-8 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-3xl"
-          : "max-w-3xl mt-4 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white"
+          : "max-w-3xl mt-4 text-3xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl w-2xl "
       }`}
     >
       {props.title}
@@ -41,7 +41,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
       className={`${
         props.id === "ubicacion"
           ? "max-w-xs p-4 text-base leading-normal text-gray-500 lg:text-lg xl:text-lg"
-          : "max-w-3xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300"
+          : "max-w-3xl py-4 text-lg leading-normal text-white lg:text-xl xl:text-xl dark:text-gray-300"
       }`}
     >
       {props.children}

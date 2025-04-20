@@ -33,7 +33,7 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
+            <div className="max-w-md mt-4 text-white dark:text-gray-400">
             Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
             brindando servicios de excelente calidad y con la mejor atencion al cliente.
             </div>
@@ -45,7 +45,7 @@ export function Footer() {
                 <Link
                   key={index}
                   href={`#${item.id}`}
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-white rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item.name}
                 </Link>
@@ -58,7 +58,7 @@ export function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-white rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
                 </Link>
@@ -67,7 +67,7 @@ export function Footer() {
           </div>
           <div className="">
             <div>Redes Sociales</div>
-            <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
+            <div className="flex mt-5 space-x-5 text-white dark:text-gray-500">
               
               <a
                 href="https://facebook.com/web3templates"
@@ -89,7 +89,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
+        <div className="my-10 text-sm text-center text-white dark:text-gray-400">
           Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
           <a href="" target="_blank" rel="noopener">
             

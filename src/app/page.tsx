@@ -25,7 +25,7 @@ export default function Home() {
             Enfocados en la <Mark>calidad y el servicio</Mark>
           </>
         }
-        className="text-center py-8 bg-snow w-full"
+        className="text-center py-16 bg-snow w-full"
         
       >
         Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
@@ -39,6 +39,7 @@ export default function Home() {
         id = "servicios"
         preTitle="Servicios"
         title="Nuestros Servicios"
+        className="bg-snow2 w-full"
       >
          Brindamos soluciones integrales para el tratamiento y cuidado de superficies metálicas. 
          Ofrecemos una amplia gama de servicios diseñados 
@@ -63,7 +64,7 @@ export default function Home() {
 
       <LayoutGridDemo />
 
-<div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image2 bg-cover bg-center bg-fixed">
+      <div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image2 bg-cover bg-center bg-fixed">
         <div className="flex flex-col items-start justify-center w-full h-full bg-white bg-opacity-70 rounded-lg p-4 md:flex-row md:p-8">
           <div className="flex flex-col items-start justify-center w-full md:w-1/2 p-4">
             <SectionTitle
@@ -89,10 +90,12 @@ export default function Home() {
           ></iframe>
         </div>
       </div>
-      <SectionTitle 
+      
+       <SectionTitle 
       id= "faq"
       preTitle="FAQ" 
-      title="Preguntas Frecuentes">
+      title="Preguntas Frecuentes"
+      className="">
       Estas son algunas de las preguntas frecuentes que recibimos de nuestros clientes. 
       Si tienes alguna otra pregunta, no dudes en contactarnos! 
       </SectionTitle>

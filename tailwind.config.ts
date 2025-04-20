@@ -25,8 +25,14 @@ const config: Config = {
         customBlue: "#003871",
         customRed: "#def0f6",
         snow: "#001211",
+        snow2:"#0A1E1D",
+        snow3:"#2B2B2B",
+
+        
+      
         davysGray: "#545863ff",
         btn: "#2678b8",
+        'gradient-custom': 'linear-gradient(to right, #003871, #2678b8)', // Degradado personalizado
       },
       filter: {
         black: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)', 
@@ -43,6 +49,7 @@ const config: Config = {
       "hero-image": "url('/img/hero2.jpg')",
       "hero-image2": "url('/img/imagen-1.jpg')",
       "card-image": "url('/img/prueba-6.jpg')",
+      'gradient-custom1': 'linear-gradient(to top, #001211, #434343)',
     },
     fontSize: {
       xs: ".75rem",
