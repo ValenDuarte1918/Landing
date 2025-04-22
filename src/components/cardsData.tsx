@@ -4,7 +4,7 @@ import  LayoutGrid  from "@/components/layout-grid";
 
 export function LayoutGridDemo() {
   return (
-    <div className="h-screen w-full bg-snow ">
+    <div className="h-screen p-12">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -15,7 +15,7 @@ export function LayoutGridDemo() {
 const cards = [
   {
     id: 1,
-    className: "md:col-span-2  ",
+    className: "col-span-2",
     thumbnail:
       "/img/prueba-6.jpg",
   },
@@ -23,19 +23,61 @@ const cards = [
     id: 2,
     className: "col-span-2",
     thumbnail:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/img/imgTrabajos1.jpg",
   },
   {
     id: 3,
     className: "col-span-2",
     thumbnail:
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/img/imgTrabajos2.jpg",
   },
   {
     id: 4,
-    className: "md:col-span-2",
+    className: "col-span-2",
     thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/img/imgTrabajos3.jpg",
+  },
+  {
+    id: 5,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos4.jpg",
+  },
+  {
+    id: 6,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos5.jpg",
+  },
+  {
+    id: 7,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos6.jpg",
+  },
+  {
+    id: 8,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos7.jpg",
+  },
+  {
+    id: 9,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos8.jpg",
+  },
+  {
+    id: 10,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos9.jpg",
+  },
+  {
+    id: 11,
+    className: "col-span-2",
+    thumbnail:
+      "/img/imgTrabajos10.jpg",
   },
 ];
 

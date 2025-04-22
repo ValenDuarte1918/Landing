@@ -23,7 +23,7 @@ const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full grid grid-cols-1 md:grid-cols-6 max-w-7xl mx-auto gap-2 relative">
+    <div className="w-full h-full grid grid-cols-4 md:grid-cols-6 max-w-4xl mx-auto gap-4 relative  ">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -59,9 +59,8 @@ const ImageComponent = ({ card }: { card: Card }) => {
       <Image
         src={card.thumbnail}
         layout="fill"
-        objectFit= "contain"
+        objectFit= "cover"
         priority={true}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="transition duration-100 rounded-xl"
         alt="thumbnail"
       />
