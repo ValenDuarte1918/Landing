@@ -65,7 +65,7 @@ const BlastingContent = () => {
               estética sin comprometer la integridad del material.
             </p>
             <Image
-              src="https://assets.aceternity.com/macbook.png"
+              src="/img/imgTrabajos8.jpg"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -100,7 +100,7 @@ const ZincadoContent = () => {
               resistencia, extendiendo la vida útil de tus materiales.
             </p>
             <Image
-              src="https://assets.aceternity.com/macbook.png"
+              src="/img/imgTrabajos5.jpg"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -123,7 +123,7 @@ const data = [
   {
     category: "",
     title: "Blasting",
-    src: "/img/6.jpg",
+    src: "/img/imgTrabajos4.jpg",
     content: <BlastingContent />,
   },
   {

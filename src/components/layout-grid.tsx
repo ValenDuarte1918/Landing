@@ -23,9 +23,20 @@ const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full grid grid-cols-4 md:grid-cols-6 max-w-4xl mx-auto gap-4 relative  ">
+    <div className="w-full h-full grid grid-cols-4 md:grid-cols-6 max-w-4xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+        <motion.div
+          key={i}
+          className={cn(card.className, "")}
+          initial={{ opacity: 0, y: 20 }} // Animación inicial
+          animate={{ opacity: 1, y: 0 }} // Animación al estar visible
+          exit={{ opacity: 0, y: 20 }} // Animación al salir
+          transition={{
+            duration: 0.5,
+            delay: 0.2 * i, // Retraso escalonado para cada tarjeta
+            ease: "easeOut",
+          }}
+        >
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
@@ -33,11 +44,11 @@ const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               "relative overflow-hidden",
               selected?.id === card.id
                 ? "rounded-lg cursor-pointer absolute inset-0 w-full h-full m-auto z-50 flex justify-center items-center"
-                : " rounded-xl h-full w-full"
+                : "rounded-xl h-full w-full"
             )}
             layoutId={`card-${card.id}`}
           >
-            <ImageComponent card={card} />
+            <ImageComponent card={card} isSelected={selected?.id === card.id} />
             {selected?.id === card.id && (
               <button
                 onClick={handleClose}
@@ -47,19 +58,33 @@ const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               </button>
             )}
           </motion.div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
 };
 
-const ImageComponent = ({ card }: { card: Card }) => {
+const ImageComponent = ({
+  card,
+  isSelected,
+}: {
+  card: Card;
+  isSelected: boolean;
+}) => {
   return (
-    <motion.div className="relative w-full h-full">
+    <motion.div
+      className={cn(
+        "relative w-full h-full cursor-pointer overflow-hidden rounded-xl transition-opacity",
+        !isSelected && "hover:opacity-40" // Solo aplica hover si no está seleccionada
+      )}
+      initial={{ scale: 0.95 }} // Animación inicial de escala
+      animate={{ scale: 1 }} // Animación al estar visible
+      transition={{ duration: 0.3, ease: "easeOut" }}
+    >
       <Image
         src={card.thumbnail}
         layout="fill"
-        objectFit= "cover"
+        objectFit="cover"
         priority={true}
         className="transition duration-100 rounded-xl"
         alt="thumbnail"

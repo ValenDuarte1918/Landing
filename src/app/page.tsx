@@ -6,6 +6,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
+import { Video } from "@/components/Video";
 import AppleCardsCarouselDemo from "@/components/card";
 import Link from "next/link";
 
@@ -63,6 +64,7 @@ export default function Home() {
       </SectionTitle>
 
       <LayoutGridDemo />
+      <Testimonials />
 
       <div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image2 bg-cover bg-center bg-fixed">
         <div className="flex flex-col items-start justify-center w-full h-full bg-white bg-opacity-70 rounded-lg p-4 md:flex-row md:p-8">
