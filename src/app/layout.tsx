@@ -4,10 +4,10 @@ import { Montserrat } from "next/font/google";
 import { Manrope } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-
+import  PopupWhatsapp  from "@/components/PopupWhatsapp";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PopupWidget }  from "@/components/PopupWidget";
+import { ContactSection }  from "@/components/PopupWidget";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,8 +30,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>
+          <ContactSection />
           <Footer />
-          <PopupWidget />
+          <PopupWhatsapp />
         </ThemeProvider>
       </body>
     </html>

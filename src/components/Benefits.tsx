@@ -19,7 +19,7 @@ interface BenefitsProps {
 export const Benefits = (props: Readonly<BenefitsProps>) => {
   const { data } = props;
   return (
-      <Container className="flex flex-wrap bg-snow mb-20 lg:gap-10 lg:flex-nowrap animate-fade-up animate-once animate-duration-[1700ms]">
+      <Container className="flex flex-wrap bg-snow mb-20 font-light font-sans lg:gap-10 lg:flex-nowrap animate-fade-up animate-once animate-duration-[1700ms]">
         <div
           className={`flex items-center justify-center w-full ml-8 lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""

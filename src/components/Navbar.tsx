@@ -32,7 +32,7 @@ export const Navbar = () => {
       <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-1 h-16">
         {/* Logo */}
         <Link href="/">
-          <span className="flex items-center space-x-2 text-2xl font-medium text-white">
+          <span className="flex items-center space-x-2 text-2xl font-medium font-sans text-white">
             <span>
               <Image
                 src="/img/foto-logo.png"
@@ -47,13 +47,13 @@ export const Navbar = () => {
         </Link>
 
         {/* Botón de contacto */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2 hover:animate-jump animate-once">
+        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
           <div className="hidden mr-3 lg:flex nav__item">
             <Link
               href="https://wa.link/lf75ot"
-              className="px-6 py-2 text-white bg-btn rounded-md md:ml-5"
+              className="px-6 py-2 font-semibold font-sans text-white bg-btn rounded-md md:ml-5"
             >
-              Contactenos
+              Presupuestos
             </Link>
           </div>
         </div>
@@ -92,7 +92,7 @@ export const Navbar = () => {
                     <Link
                       key={index}
                       href={`#${menu.id}`}
-                      className="block px-4 py-2 mt-2 text-sm font-semibold text-white bg-transparent rounded-lg dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                      className="block px-4 py-2 mt-2 text-sm font-bold font-sans text-white bg-transparent rounded-lg dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
                     >
                       {menu.name}
                     </Link>

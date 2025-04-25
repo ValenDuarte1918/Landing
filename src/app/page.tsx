@@ -26,7 +26,7 @@ export default function Home() {
             Enfocados en la <Mark>calidad y el servicio</Mark>
           </>
         }
-        className="text-center py-16 bg-snow w-full"
+        className="text-center font-light font-sans py-16 bg-snow w-full"
         
       >
         Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
@@ -40,7 +40,7 @@ export default function Home() {
         id = "servicios"
         preTitle="Servicios"
         title="Nuestros Servicios"
-        className="bg-snow2 w-full"
+        className="bg-snow2 w-full font-light font-sans"
       >
          Brindamos soluciones integrales para el tratamiento y cuidado de superficies metálicas. 
          Ofrecemos una amplia gama de servicios diseñados 
@@ -56,7 +56,7 @@ export default function Home() {
         id = "trabajos"
         preTitle="Trabajos"
         title="Nuestros Trabajos"
-        className="bg-snow"
+        className="bg-snow font-light font-sans"
       >
       Descubra algunos de los proyectos que hemos realizado con precisión y dedicación. Cada trabajo refleja 
       nuestro compromiso con la calidad y el detalle, garantizando resultados que superan las expectativas de 
@@ -66,7 +66,7 @@ export default function Home() {
       <LayoutGridDemo />
       <Testimonials />
 
-      <div className="flex flex-col items-start justify-center w-full h-screen p-4 md:flex-row md:p-24 bg-hero-image2 bg-cover bg-center bg-fixed">
+      <div className="flex flex-col items-start justify-center w-full h-screen p-4 font-light font-sans md:flex-row md:p-24 bg-hero-image2 bg-cover bg-center bg-fixed">
         <div className="flex flex-col items-start justify-center w-full h-full bg-white bg-opacity-70 rounded-lg p-4 md:flex-row md:p-8">
           <div className="flex flex-col items-start justify-center w-full md:w-1/2 p-4">
             <SectionTitle
@@ -77,7 +77,7 @@ export default function Home() {
               Horarios de atención:
               Lunes a viernes de 9 a 18:00
             </SectionTitle>
-            <div className="mt-4 md:mt-8 flex justify-center w-full">
+            <div className="mt-4 md:mt-8 flex justify-center w-full font-bold font-sans">
               <Link href="https://wa.link/lf75ot" className="px-6 py-2 text-white bg-btn rounded-md hover:animate-jump animate-once">
                 Contactenos
               </Link>
@@ -97,7 +97,7 @@ export default function Home() {
       id= "faq"
       preTitle="FAQ" 
       title="Preguntas Frecuentes"
-      className="">
+      className="font-light font-sans">
       Estas son algunas de las preguntas frecuentes que recibimos de nuestros clientes. 
       Si tienes alguna otra pregunta, no dudes en contactarnos! 
       </SectionTitle>
