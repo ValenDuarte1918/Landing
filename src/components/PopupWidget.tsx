@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import {
   Disclosure,
   Transition,
@@ -24,35 +25,26 @@ export function PopupWidget() {
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data: any, e: any) => {
-    console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
+  const onSubmit = async (data: any) => {
+    const publicKey = "1wuDzjzzPzthPPBpJ"; // Reemplaza con tu Public Key de EmailJS
+  
+    try {
+      const response = await emailjs.send(
+        "service_ywwx9xl",
+        "template_587tial",
+        data,
+        publicKey
+      );
+      console.log("Correo enviado con éxito:", response.status, response.text);
+      setIsSuccess(true);
+      setMessage("¡Mensaje enviado con éxito!");
+      reset(); // Limpia el formulario solo si el envío fue exitoso
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+      setIsSuccess(false);
+      setMessage("Hubo un error al enviar el mensaje.");
+    }
   };
-
   return (
     <div>
       <Disclosure>
@@ -119,7 +111,7 @@ export function PopupWidget() {
             >
               <DisclosurePanel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
-                  <h3 className="text-lg text-white">Como podemos ayudar?</h3>
+                  <h3 className="text-lg text-white">¿Como podemos ayudar?</h3>
                   <p className="text-white opacity-50">
                     Te responderemos lo antes posible!
                   </p>
@@ -127,39 +119,17 @@ export function PopupWidget() {
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Nextly Template"
-                        {...register("from_name")}
-                      />
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        style={{ display: "none" }}
-                        {...register("botcheck")}
-                      ></input>
-
                       <div className="mb-4">
                         <label
                           htmlFor="full_name"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Nombre Completo|
+                          Nombre Completo
                         </label>
                         <input
                           type="text"
                           id="full_name"
-                          placeholder="John Doe"
+                          placeholder="Tu nombre"
                           {...register("name", {
                             required: "Tu nombre es requerido",
                             maxLength: 80,
@@ -191,7 +161,7 @@ export function PopupWidget() {
                             required: "Tu correo electrónico es requerido",
                             pattern: {
                               value: /^\S+@\S+$/i,
-                              message: "Please enter a valid email",
+                              message: "Por favor ingresa un correo válido",
                             },
                           })}
                           placeholder="Tu correo electrónico"
@@ -304,14 +274,14 @@ export function PopupWidget() {
                         />
                       </svg>
                       <h3 className="py-5 text-xl text-green-500">
-                        Message sent successfully
+                        Mensaje enviado con éxito!
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
                         onClick={() => reset()}
                       >
-                        Go back
+                        Volver
                       </button>
                     </div>
                   )}
@@ -334,14 +304,14 @@ export function PopupWidget() {
                       </svg>
 
                       <h3 className="text-xl text-red-400 py-7">
-                        Oops, Something went wrong!
+                       Hubo un error al enviar el mensaje
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
                         onClick={() => reset()}
                       >
-                        Go back
+                        volver
                       </button>
                     </div>
                   )}
