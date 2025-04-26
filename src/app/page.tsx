@@ -93,16 +93,8 @@ export default function Home() {
         </div>
       </div>
       
-       <SectionTitle 
-      id= "faq"
-      preTitle="FAQ" 
-      title="Preguntas Frecuentes"
-      className="font-light font-sans">
-      Estas son algunas de las preguntas frecuentes que recibimos de nuestros clientes. 
-      Si tienes alguna otra pregunta, no dudes en contactarnos! 
-      </SectionTitle>
 
-      <Faq />
+      
     </Container>
   );
 };

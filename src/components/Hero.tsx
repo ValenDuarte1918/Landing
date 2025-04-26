@@ -23,7 +23,7 @@ export const Hero = () => {
             target="_blank"
             rel="noopener"
             className="px-4 py-4 text-lg font-bold font-sans text-center text-white bg-btn rounded-md hover:bg-btn-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-300 ease-in-out">
-            Contáctano
+            Contáctanos
           </a>
         </div>
       </div>

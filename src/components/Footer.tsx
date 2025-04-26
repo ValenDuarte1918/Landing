@@ -53,17 +53,14 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
-                <Link
-                  key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-white rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
+          <div>
+  <div className="text-white dark:text-gray-400">
+    <h3 className="text-lg font-medium">Contáctanos</h3>
+    <p className="mt-2">Teléfono: 11-57491731</p>
+    <p>Email: Procesosmet@hotmail.com </p>
+    <p>Dirección: Salta 241, Bella Vista, Buenos Aires</p>
+  </div>
+</div>
           </div>
           <div className="">
             <div>Redes Sociales</div>
