@@ -29,8 +29,9 @@ export default function Home() {
         className="text-center font-light font-sans py-16 bg-snow w-full"
         
       >
-        Somos una empresa familiar que cuenta con mas de 10 años de experiencia en el rubro 
-        brindando servicios de excelente calidad y con la mejor atencion al cliente.
+        Somos una empresa familiar con más de 10 años de trayectoria, especializada en el tratamiento de 
+        superficies metálicas. Nuestro enfoque está puesto en brindar soluciones eficientes, 
+        con altos estándares de calidad y una atención cercana que prioriza las necesidades de cada cliente.
 
       </SectionTitle>
 
@@ -77,8 +78,8 @@ export default function Home() {
               Horarios de atención:
               Lunes a viernes de 9 a 18:00
             </SectionTitle>
-            <div className="mt-4 md:mt-8 flex justify-center w-full font-bold font-sans">
-              <Link href="https://wa.link/lf75ot" className="px-6 py-2 text-white bg-btn rounded-md hover:animate-jump animate-once">
+            <div className="flex justify-center w-full font-bold font-sans">
+              <Link href="https://wa.link/lf75ot" className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none">
                 Contactenos
               </Link>
             </div>

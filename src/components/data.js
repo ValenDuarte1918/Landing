@@ -6,22 +6,22 @@ import benefitOneImg from "../../public/img/Imagen.png";
 
 const benefitOne = {
   title: "Soluciones a medida para cada desafío",
-  desc: "En Arenados y Blasting, somos expertos en soluciones personalizadas para cada desafío. Nos especializamos en el tratamiento de piezas de todas las dimensiones y complejidades, desde componentes pequeños hasta grandes estructuras",
+  desc: "En Arenados y Blasting ofrecemos servicios personalizados, adaptados a los requerimientos específicos de cada proyecto. Trabajamos piezas de todas las dimensiones y complejidades, garantizando resultados óptimos tanto para componentes individuales como para proyectos",
   image: benefitOneImg,
   bullets: [
     {
       title: "Transformamos Tus Ideas en Resultados Concretos",
-      desc: "Nuestro equipo de profesionales altamente capacitados y con amplia experiencia en el rubro, se encargará de brindarte la solución que necesitas para tu proyecto.",
+      desc: "Contamos con un equipo capacitado y con experiencia, listo para ayudarte a materializar tus proyectos con precisión, eficiencia y compromiso.",
       icon: <FaLightbulb />,
     },
     {
       title: "Especialistas en Tratamiento de Superficies",
-      desc: " Contamos con la tecnología y los conocimientos necesarios para brindarte un servicio de calidad y a la altura de tus expectativas.",
+      desc: "Nos apoyamos en técnicas especializadas y herramientas adecuadas para lograr acabados de alta calidad, durabilidad y estética en todo tipo de piezas metálicas.",
       icon: <BsStars />,
     },
     {
       title: "Innovación y Calidad para Tu Negocio",
-      desc: " En Arenados y Blasting, trabajamos con los más altos estándares de calidad y seguridad para garantizar la satisfacción de nuestros clientes.",
+      desc: "Aplicamos procesos modernos y seguros, alineados con estándares de excelencia, para asegurar resultados confiables y superar las expectativas de nuestros clientes.",
       icon: <ChartBarSquareIcon />,
     },
   ],
