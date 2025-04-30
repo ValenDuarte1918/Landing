@@ -15,7 +15,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
     <Container
     id={props.id}
     className={`flex flex-col ${  //alargar el texto
-      props.id === "nosotros" ? "font-bold font-sans items-center justify-start text-start py-16 bg-gradient-custom1 " : "items-center justify-center text-center py-16"
+      props.id === "nosotros" ? "font-bold font-sans items-center justify-start text-start py-16 px-4 bg-gradient-custom1 " : "items-center justify-center text-center py-16 px-4"
     } ${props.className}`} // Añadir props.className aquí
   >
   {props.preTitle && (

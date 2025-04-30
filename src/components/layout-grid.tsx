@@ -83,11 +83,12 @@ const ImageComponent = ({
     >
       <Image
         src={card.thumbnail}
-        layout="fill"
-        objectFit="cover"
-        priority={true}
+        fill // Hace que la imagen ocupe todo el contenedor
+        style={{ objectFit: "cover" }} // Simula el comportamiento de `objectFit="cover"`
+        priority={true} // Prioriza la carga de imágenes críticas
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Tamaños adaptativos
         className="transition duration-100 rounded-xl"
-        alt="thumbnail"
+        alt={`Card ${card.id}`} // Texto alternativo dinámico
       />
     </motion.div>
   );

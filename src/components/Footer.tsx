@@ -25,8 +25,8 @@ export function Footer() {
                 <Image
                   src="/img/foto-logo.png"
                   alt="N"
-                  width="32"
-                  height="32"
+                  width={32}
+                  height={32}
                   className="w-8"
                 />
                 <span>Arenados y Blasting</span>
@@ -67,7 +67,7 @@ export function Footer() {
             <div className="flex mt-5 space-x-5 text-white dark:text-gray-500">
               
               <a
-                href="https://facebook.com/web3templates"
+                href="https://www.facebook.com/share/1EVY87cVeg/"
                 target="_blank"
                 rel="noopener"
               >

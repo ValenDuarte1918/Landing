@@ -14,7 +14,7 @@ const FloatingButton = () => {
       className="fixed bottom-4 right-5 w-16 h-16"
     >
         <img
-        src="/img/whatsapp.png" // Ruta de la imagen
+        src="/img/WhatsApp-logo.svg" // Ruta de la imagen
         alt="WhatsApp"
         className="w-full "
       />

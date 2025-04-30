@@ -59,55 +59,52 @@ export const Navbar = () => {
         </div>
 
         <Disclosure>
-          {({ open }) => (
-            <>
-              <Disclosure.Button
-                aria-label="Toggle Menu"
-                className="lg:hidden focus:outline-none"
-              >
-                <svg
-                  className="w-6 h-6 fill-current text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  {open && (
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                    />
-                  )}
-                  {!open && (
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                    />
-                  )}
-                </svg>
-              </Disclosure.Button>
-              <Disclosure.Panel className="lg:hidden">
-                <>
-                  {navigation.map((menu, index) => (
-                    <Link
-                      key={index}
-                      href={`#${menu.id}`}
-                      className="block px-4 py-2 mt-2 text-sm font-bold font-sans text-white bg-transparent rounded-lg dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
-                    >
-                      {menu.name}
-                    </Link>
-                  ))}
-                  <Link
-                    href="#get-started"
-                    className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-                  >
-                    Contactenos
-                  </Link>
-                </>
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
+  {({ open }) => (
+    <>
+      <Disclosure.Button
+        aria-label="Toggle Menu Mobile"
+        className="lg:hidden focus:outline-none focus:ring-4 focus:ring-black rounded-lg p-2 transition-transform duration-300"
+      >
+        {open ? (
+          // Ícono de "Cerrar" (Cruz genérica)
+          <svg
+            className="w-6 h-6 fill-current text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 18L18 6M6 6l12 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        ) : (
+          // Ícono personalizado de menú hamburguesa
+          <img src="/img/hamburger-menu.svg" alt="Menu" className="w-6 h-6 text-white" />
+        )}
+      </Disclosure.Button>
+      <Disclosure.Panel
+        className={`lg:hidden absolute top-16 left-0 w-full bg-customBlue bg-opacity-90 transition-transform duration-300 ${
+          open ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="flex flex-col items-center py-4 space-y-4">
+          {navigation.map((menu, index) => (
+            <Link
+              key={index}
+              href={`#${menu.id}`}
+              className="block px-4 py-2 text-sm font-bold font-sans text-white bg-transparent rounded-lg hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
+            >
+              {menu.name}
+            </Link>
+          ))}
+          <Link
+            href="#get-started"
+            className="w-11/12 px-6 py-2 text-center text-white bg-indigo-600 rounded-md"
+          >
+            Contáctenos
+          </Link>
+        </div>
+      </Disclosure.Panel>
+    </>
+  )}
+</Disclosure>
 
         {/* Menú */}
         <div className="hidden text-center lg:flex lg:items-center w-1/2 ">
