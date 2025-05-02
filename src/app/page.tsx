@@ -100,7 +100,7 @@ export default function Home() {
   );
 };
 
-function Mark(props: { readonly children: React.ReactNode }) {
+export function Mark(props: { readonly children: React.ReactNode }) {
   return (
     <>
       {" "}

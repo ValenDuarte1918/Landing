@@ -34,7 +34,7 @@ const DummyContent = () => {
               cualquier tratamiento posterior, como pintura o recubrimientos protectores.
             </p>
             <Image
-              src="https://assets.aceternity.com/macbook.png"
+              src="/img/imgTrabajos1.jpg"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"

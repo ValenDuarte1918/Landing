@@ -14,7 +14,7 @@ const cards = [
   {
     id: 1,
     className: "col-span-2",
-    thumbnail: "/img/prueba-6.jpg",
+    thumbnail: "/img/prueba-6.webp",
   },
   {
     id: 2,

@@ -7,7 +7,7 @@ interface BenefitsProps {
   data: {
     imgPos?: "left" | "right";
     title: string;
-    desc: string;
+    desc: string | JSX.Element;
     image: any;
     bullets: {
       title: string;

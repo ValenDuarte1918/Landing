@@ -58,7 +58,7 @@ export const Navbar = () => {
                   ) : (
                     // Ícono personalizado de menú hamburguesa
                     <img
-                      src="/img/hamburger-menu.svg"
+                      src="/img/menu-hamburguesa.svg"
                       alt="Menu"
                       className="w-6 h-6"
                     />

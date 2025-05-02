@@ -1,7 +1,7 @@
 import { ChartBarSquareIcon,} from "@heroicons/react/24/solid";
 import { FaLightbulb } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-import Mark from "../app/page";
+import {Mark} from "../app/page";
 import benefitOneImg from "../../public/img/Imagen.png";
 
 const benefitOne = {
@@ -10,18 +10,19 @@ const benefitOne = {
   image: benefitOneImg,
   bullets: [
     {
-      title: "Transformamos Tus Ideas en Resultados Concretos",
-      desc: "Contamos con un equipo capacitado y con experiencia, listo para ayudarte a materializar tus proyectos con precisión, eficiencia y compromiso.",
+      title: " Transformamos tus ideas en resultados reales",
+      desc: 
+      "Nuestro equipo está preparado para asesorarte desde el primer momento. Escuchamos tus necesidades y las convertimos en soluciones concretas, eficientes y funcionales.",
       icon: <FaLightbulb />,
     },
     {
-      title: "Especialistas en Tratamiento de Superficies",
-      desc: "Nos apoyamos en técnicas especializadas y herramientas adecuadas para lograr acabados de alta calidad, durabilidad y estética en todo tipo de piezas metálicas.",
+      title: "Especialistas en tratamiento de superficies",
+      desc: "Contamos con el conocimiento, las herramientas y la experiencia para lograr acabados de excelente calidad, resistentes y duraderos.",
       icon: <BsStars />,
     },
     {
-      title: "Innovación y Calidad para Tu Negocio",
-      desc: "Aplicamos procesos modernos y seguros, alineados con estándares de excelencia, para asegurar resultados confiables y superar las expectativas de nuestros clientes.",
+      title: "Compromiso con la innovación y la mejora continua",
+      desc: "Trabajamos con procesos actualizados, priorizando la seguridad, la calidad y el cumplimiento de plazos para acompañar el crecimiento de tu negocio.",
       icon: <ChartBarSquareIcon />,
     },
   ],
