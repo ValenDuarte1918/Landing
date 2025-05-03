@@ -1,15 +1,11 @@
-import Image from "next/image";
 import React, {Suspense} from "react";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
 import { Testimonials } from "@/components/Testimonials";
-import { Faq } from "@/components/Faq";
-import { Video } from "@/components/Video";
 import AppleCardsCarouselDemo from "@/components/card";
 import Link from "next/link";
-
 import { benefitOne } from "@/components/data";
 import  LayoutGridDemo from "@/components/cardsData";
 

@@ -35,7 +35,7 @@ const DummyContent = () => {
             </p>
             <Image
               src="/img/imgTrabajos1.jpg"
-              alt="Macbook mockup from Aceternity UI"
+              alt="Granallado"
               height="500"
               width="500"
               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
@@ -66,7 +66,7 @@ const BlastingContent = () => {
             </p>
             <Image
               src="/img/imgTrabajos8.webp"
-              alt="Macbook mockup from Aceternity UI"
+              alt="Blasting"
               height="500"
               width="500"
               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
@@ -101,7 +101,7 @@ const ZincadoContent = () => {
             </p>
             <Image
               src="/img/imgTrabajos5.jpg"
-              alt="Macbook mockup from Aceternity UI"
+              alt="Zincado"
               height="500"
               width="500"
               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"

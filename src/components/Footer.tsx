@@ -54,12 +54,12 @@ export function Footer() {
           </div>
           <div>
           <div>
-  <div className="text-white dark:text-gray-400">
-    <h3 className="text-lg font-medium">Contáctanos</h3>
-    <p className="mt-2">Teléfono: 11-57491731</p>
-    <p>Email: Procesosmet@hotmail.com </p>
-    <p>Dirección: Salta 241, Bella Vista, Buenos Aires</p>
-  </div>
+            <div className="text-white dark:text-gray-400">
+              <h3 className="text-lg font-medium">Contáctanos</h3>
+              <p className="mt-2">Teléfono: 11-57491731</p>
+              <p>Email: Procesosmet@hotmail.com </p>
+              <p>Dirección: Salta 241, Bella Vista, Buenos Aires</p>
+            </div>
 </div>
           </div>
           <div className="">
@@ -87,10 +87,15 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-white dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="" target="_blank" rel="noopener">
-            
-          </a>{" "}
+            Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
+            <a
+              href="https://www.linkedin.com/in/valentin-duarte-426945265/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-500 hover:underline"
+            >
+              Valentin Duarte
+            </a>
         </div>
       </Container>
       {/* Do not remove this */}

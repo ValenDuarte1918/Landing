@@ -20,7 +20,7 @@ export function ContactSection() {
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
   const onSubmit = async (data: any) => {
-    const publicKey = "1wuDzjzzPzthPPBpJ"; // Reemplaza con tu Public Key de EmailJS
+    const publicKey = "1wuDzjzzPzthPPBpJ"; 
 
     try {
       const response = await emailjs.send(
@@ -177,9 +177,8 @@ export function ContactSection() {
             {isSubmitSuccessful && isSuccess && (
               <div className="text-center">
                 <h3 className="text-xl text-green-500">¡Mensaje enviado con éxito!</h3>
-                <p className="text-gray-700">{Message}</p>
                 <button
-                  className="mt-6 text-indigo-600 focus:outline-none"
+                  className="inline-flex items-center justify-center px-3 py-2 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
                   onClick={() => reset()}
                 >
                   Volver
@@ -190,9 +189,8 @@ export function ContactSection() {
             {isSubmitSuccessful && !isSuccess && (
               <div className="text-center">
                 <h3 className="text-xl text-red-400">Hubo un error al enviar el mensaje</h3>
-                <p className="text-gray-700">{Message}</p>
                 <button
-                  className="mt-6 text-indigo-600 focus:outline-none"
+                  className="inline-flex items-center justify-center px-3 py-2 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
                   onClick={() => reset()}
                 >
                   Volver

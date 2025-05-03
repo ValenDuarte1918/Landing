@@ -1,7 +1,6 @@
 import { ChartBarSquareIcon,} from "@heroicons/react/24/solid";
 import { FaLightbulb } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-import {Mark} from "../app/page";
 import benefitOneImg from "../../public/img/Imagen.png";
 
 const benefitOne = {

@@ -7,9 +7,7 @@ import React, {
   useContext,
 } from "react";
 import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-  IconX,
+  IconX
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
