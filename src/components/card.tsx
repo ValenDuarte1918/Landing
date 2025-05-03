@@ -65,7 +65,7 @@ const BlastingContent = () => {
               estética sin comprometer la integridad del material.
             </p>
             <Image
-              src="/img/imgTrabajos8.jpg"
+              src="/img/imgTrabajos8.webp"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -123,7 +123,7 @@ const data = [
   {
     category: "",
     title: "Blasting",
-    src: "/img/imgTrabajos4.jpg",
+    src: "/img/imgTrabajos4.webp",
     content: <BlastingContent />,
   },
   {
