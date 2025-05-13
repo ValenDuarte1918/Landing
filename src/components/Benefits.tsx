@@ -9,6 +9,7 @@ interface BenefitsProps {
     title: string;
     desc: string | JSX.Element;
     image: any;
+    secondImage: any;
     bullets: {
       title: string;
       desc: string;
@@ -21,7 +22,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
   return (
       <Container className="flex flex-wrap bg-snow mb-20 font-light font-sans lg:gap-10 lg:flex-nowrap animate-fade-up animate-once animate-duration-[1700ms]">
         <div
-          className={`flex items-center justify-center w-full ml-8 lg:w-1/2 ${
+          className={`flex items-center justify-center w-full m-4 lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}>
           <div className="relative flex items-center justify-center w-full h-full lg:h-full ">
@@ -30,7 +31,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
               width={1000}
               height={1000}
               alt="Benefits"
-              className="object-cover object-center w-full h-full rounded-lg lg:rounded-xl"
+              className="object-cover object-center  w-full h-full rounded-lg lg:rounded-xl"
               placeholder="blur"
               blurDataURL={data.image.src}
             />

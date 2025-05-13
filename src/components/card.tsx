@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Carousel, Card } from "@/components/apple-cards-carousel";
+import { Carousel, Card } from "@/components/cards-carousel";
 
  function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (

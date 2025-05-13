@@ -1,12 +1,14 @@
 import { ChartBarSquareIcon,} from "@heroicons/react/24/solid";
 import { FaLightbulb } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
-import benefitOneImg from "../../public/img/Imagen.png";
+import benefitOneImg from "../../public/img/img-sobreNosotros.jpg";
+import benefitTwoImg from "../../public/img/img-sobreNosotros-2.jpg";
 
 const benefitOne = {
   title: "Soluciones a medida para cada desafío",
   desc: "En Arenados y Blasting ofrecemos servicios personalizados, adaptados a los requerimientos específicos de cada proyecto. Trabajamos piezas de todas las dimensiones y complejidades, garantizando resultados óptimos tanto para componentes individuales como para proyectos",
   image: benefitOneImg,
+  secondImage: benefitTwoImg,
   bullets: [
     {
       title: " Transformamos tus ideas en resultados reales",
