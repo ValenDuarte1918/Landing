@@ -3,13 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Cambia el estado si el usuario baja más de 50px
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,7 +42,6 @@ export const Navbar = () => {
                   className="lg:hidden rounded-lg flex items-center justify-center w-10 h-10 z-50"
                 >
                   {open ? (
-                    // Ícono de "Cerrar" (Cruz genérica)
                     <svg
                       className="w-6 h-6 fill-current text-white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,6 @@ export const Navbar = () => {
                       />
                     </svg>
                   ) : (
-                    // Ícono personalizado de menú hamburguesa
                     <img
                       src="/img/menu-hamburguesa.svg"
                       alt="Menu"
@@ -66,11 +65,14 @@ export const Navbar = () => {
                 </Disclosure.Button>
 
                 <Disclosure.Panel
-                  className={`lg:hidden absolute top-16 left-0 w-full bg-customBlue bg-opacity-90 transition-transform duration-300 ${
-                    open ? "translate-y-0" : "-translate-y-full"
-                  }`}
+                  as={motion.div}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: open ? 1 : 0, y: open ? 0 : -20 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className={`lg:hidden absolute top-14 right-0 w-full bg-customBlue bg-opacity-90 shadow-lg`}
                 >
-                  <div className="flex flex-col items-center py-4 space-y-4">
+                  <div className="flex flex-col items-center py-6 space-y-6">
                     {navigation.map((menu, index) => (
                       <Link
                         key={index}
@@ -81,10 +83,10 @@ export const Navbar = () => {
                       </Link>
                     ))}
                     <Link
-                      href="#get-started"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
+                      href="https://wa.link/lf75ot"
+                      className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-700 border border-transparent rounded-md shadow-sm hover:bg-blue-800 focus:outline-none"
                     >
-                      Presupuestos 
+                      Presupuestos
                     </Link>
                   </div>
                 </Disclosure.Panel>
@@ -94,7 +96,7 @@ export const Navbar = () => {
 
           {/* Logo */}
           <Link href="/">
-            <span className="flex items-center space-x-2 text-2xl font-medium font-sans text-white">
+            <span className="flex items-center space-x-2 text-xl font-medium font-sans text-white">
               <span>
                 <Image
                   src="/img/foto-logo.png"
