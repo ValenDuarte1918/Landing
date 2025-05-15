@@ -87,7 +87,7 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-white dark:text-gray-400">
-            Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
+            Copyright © {new Date().getFullYear()}. Made by{" "}
             <a
               href="https://www.linkedin.com/in/valentin-duarte-426945265/"
               target="_blank"
