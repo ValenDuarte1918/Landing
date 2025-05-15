@@ -3,13 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Cambia el estado si el usuario baja más de 50px
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,7 +42,6 @@ export const Navbar = () => {
                   className="lg:hidden rounded-lg flex items-center justify-center w-10 h-10 z-50"
                 >
                   {open ? (
-                    // Ícono de "Cerrar" (Cruz genérica)
                     <svg
                       className="w-6 h-6 fill-current text-white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,6 @@ export const Navbar = () => {
                       />
                     </svg>
                   ) : (
-                    // Ícono personalizado de menú hamburguesa
                     <img
                       src="/img/menu-hamburguesa.svg"
                       alt="Menu"
