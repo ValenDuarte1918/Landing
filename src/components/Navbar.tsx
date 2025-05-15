@@ -29,9 +29,9 @@ export const Navbar = () => {
         isScrolled ? "bg-customBlue bg-opacity-90" : "bg-customBlue bg-opacity-0"
       }`}
     >
-      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-1 h-16">
+      <nav className="container relative flex flex-wrap items-center justify-between p-2 mx-auto lg:justify-between xl:px-1 h-24">
         {/* Logo e íconos */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           {/* Botón de menú hamburguesa */}
           <Disclosure>
             {({ open }) => (
@@ -64,28 +64,38 @@ export const Navbar = () => {
                     />
                   )}
                 </Disclosure.Button>
-
                 <Disclosure.Panel
-                  className={`lg:hidden absolute top-16 left-0 w-full bg-customBlue bg-opacity-90 transition-transform duration-300 ${
-                    open ? "translate-y-0" : "-translate-y-full"
-                  }`}
+                  className={`lg:hidden fixed top-24 left-0 w-full h-[calc(100vh-6rem)] bg-customBlue bg-opacity-90 backdrop-blur-md shadow-2xl transition-all duration-500 z-50 ${
+                    open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+                  } flex flex-col`}
                 >
-                  <div className="flex flex-col items-center py-4 space-y-4">
+                  <div className="relative flex flex-col items-center justify-center h-full space-y-8 px-8">
+                    {/* Botón de cerrar arriba a la derecha */}
+                    <div className="absolute top-4 right-6">
+                      <Disclosure.Button aria-label="Cerrar menú" className="p-2 rounded-full hover:bg-blue-700 transition">
+                        <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24">
+                          <path d="M6 18L18 6M6 6l12 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </Disclosure.Button>
+                    </div>
                     {navigation.map((menu, index) => (
-                      <Link
+                      <Disclosure.Button
+                        as={Link}
                         key={index}
                         href={`#${menu.id}`}
-                        className="block px-4 py-2 text-sm font-bold font-sans text-white bg-transparent rounded-lg hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
+                        className="w-full text-center px-4 py-4 text-xl font-bold text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition"
                       >
                         {menu.name}
-                      </Link>
+                      </Disclosure.Button>
                     ))}
-                    <Link
-                      href="#get-started"
-                      className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
+                    <div className="w-2/3 border-t-2 border-blue-300 my-4"></div>
+                    <Disclosure.Button
+                      as={Link}
+                      href="https://wa.link/lf75ot"
+                      className="w-full inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-xl shadow-md hover:bg-blue-700 hover:scale-105 transition"
                     >
-                      Presupuestos 
-                    </Link>
+                      Presupuestos
+                    </Disclosure.Button>
                   </div>
                 </Disclosure.Panel>
               </>
@@ -94,17 +104,14 @@ export const Navbar = () => {
 
           {/* Logo */}
           <Link href="/">
-            <span className="flex items-center space-x-2 text-2xl font-medium font-sans text-white">
-              <span>
-                <Image
-                  src="/img/foto-logo.png"
-                  width="100"
-                  alt="N"
-                  height="100"
-                  className="w-12 h-12 rounded-full"
-                />
-              </span>
-              <span>Arenados y Blasting</span>
+            <span>
+              <Image
+                src="/img/logo2.webp"
+                width={140}
+                height={140}
+                alt="logo"
+                className="max-h-20 w-auto"
+              />
             </span>
           </Link>
         </div>
