@@ -18,19 +18,17 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div>
               {" "}
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
-              >
-                <Image
-                  src="/img/foto-logo.png"
-                  alt="N"
-                  width={32}
-                  height={32}
-                  className="w-8"
-                />
-                <span>Arenados y Blasting</span>
-              </Link>
+          <Link href="/">
+            <span>
+              <Image
+                src="/img/logo2.webp"
+                width={200}
+                height={10}
+                alt="logo"
+                className="max-h-20 w-auto"
+              />
+            </span>
+          </Link>
             </div>
 
             <div className="max-w-md mt-4 text-white dark:text-gray-400">
