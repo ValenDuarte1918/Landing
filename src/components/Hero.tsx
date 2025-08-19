@@ -2,15 +2,25 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 
 const HeroHeader = () => (
-  <h1 className="text-3xl font-bold leading-snug tracking-tight text-white lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight drop-shadow-lg">
-    Especialistas en soluciones de superficie
-  </h1>
+  <div className="mb-6">
+    <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight drop-shadow-2xl">
+      Superficies como nuevas,
+    </h1>
+    <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight drop-shadow-2xl mt-2">
+      <span className="text-blue-300">rendimiento asegurado</span>
+    </h1>
+  </div>
 );
 
 const HeroDescription = () => (
-  <p className="py-6 text-lg font-medium leading-relaxed text-white/90 lg:text-xl xl:text-2xl drop-shadow-md max-w-3xl mx-auto">
-    Brindamos soluciones a medida para cada superficie. Tu proyecto en manos expertas.
-  </p>
+  <div className="mb-8">
+    <p className="text-xl font-normal leading-relaxed text-white/85 lg:text-2xl xl:text-3xl drop-shadow-lg max-w-4xl mx-auto">
+      Calidad y detalle en cada proyecto.
+    </p>
+    <p className="text-base font-light leading-relaxed text-white/70 lg:text-lg xl:text-xl max-w-3xl mx-auto mt-3">
+      Especialistas en granallado y preparación de superficies industriales
+    </p>
+  </div>
 );
 
 const HeroStats = () => (
@@ -63,9 +73,9 @@ export const Hero = () => {
       {/* Overlay mejorado con gradiente */}
       <div className="absolute inset-0 bg-black/75 z-10"></div>
       
-      <Container className="flex flex-wrap h-full relative justify-center items-center z-20">
-        <div className="flex flex-col items-center w-full lg:w-2/3 xl:w-1/2 animate-fade-up animate-once animate-duration-1000 animate-delay-300">
-          <div className="max-w-5xl text-center space-y-6">
+      <Container className="flex flex-wrap h-full relative justify-center items-center z-20 px-4">
+        <div className="flex flex-col items-center w-full lg:w-4/5 xl:w-3/4 animate-fade-up animate-once animate-duration-1000 animate-delay-300">
+          <div className="max-w-6xl text-center">
             <HeroHeader />
             <HeroDescription />
             <HeroStats />

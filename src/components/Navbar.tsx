@@ -133,7 +133,7 @@ export const Navbar = () => {
       <div className="navbar-end">
         <Link
           href="https://wa.link/lf75ot"
-          className="btn hidden lg:flex text-white font-semibold text-base px-6 py-2 bg-white/20 hover:bg-white/30 border border-white/30 hover:border-white/50 backdrop-blur-sm shadow-md hover:shadow-xl transition-all duration-200 ease-out will-change-transform hover:scale-105"
+          className="btn hidden lg:flex text-white font-semibold text-base px-6 py-2 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-sm shadow-md hover:shadow-xl transition-all duration-200 ease-out will-change-transform hover:scale-105"
         >
           Presupuestos
         </Link>
@@ -171,7 +171,7 @@ export const Navbar = () => {
                   <Link
                     href="https://wa.link/lf75ot"
                     onClick={closeMenu}
-                    className="btn w-full text-white font-semibold text-lg py-4 bg-white/20 hover:bg-white/30 border border-white/30 hover:border-white/50 backdrop-blur-sm transition-all duration-200 hover:scale-105 will-change-transform hover:shadow-lg"
+                    className="btn w-full text-white font-semibold text-lg py-4 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-sm transition-all duration-200 hover:scale-105 will-change-transform hover:shadow-lg"
                   >
                     Presupuestos
                   </Link>
