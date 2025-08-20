@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { Container } from "@/components/Container";
-import { SectionTitle } from "@/components/SectionTitle";
-import { Video } from "@/components/Video";
+import { Container } from "@/components/layout";
+import { SectionTitle, Video } from "@/components/ui";
 
 export const Testimonials = () => {
   return (

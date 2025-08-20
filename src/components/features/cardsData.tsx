@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import LayoutGrid from "@/components/layout-grid";
+import LayoutGrid from "@/components/features/layout-grid";
 
 export function LayoutGridDemo() {
   return (

@@ -15,10 +15,10 @@ const config: Config = {
   theme: {
     extend: {
       textDecorationThickness: {
-        'thick': '2px', // Ajusta el grosor según tus necesidades
+        'thick': '2px',
       },
       padding: {
-        '2': '0.5rem', // Ajusta el padding según tus necesidades
+        '2': '0.5rem',
       },
       colors: {
         trueGray: colors.neutral,
@@ -27,15 +27,74 @@ const config: Config = {
         snow: "#001211",
         snow2:"#0A1E1D",
         snow3:"#2B2B2B",
-
-        
-      
         davysGray: "#545863ff",
         btn: "#2678b8",
-        'gradient-custom': 'linear-gradient(to right, #003871, #2678b8)', // Degradado personalizado
+        'gradient-custom': 'linear-gradient(to right, #003871, #2678b8)',
       },
       filter: {
         black: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)', 
+      },
+      animation: {
+        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+        'fade-in-delayed': 'fadeInUp 1s ease-out 0.3s both',
+        'slide-in-up': 'slideInUp 0.8s ease-out forwards',
+        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+        'float': 'float 3s ease-in-out infinite',
+        'float-delayed': 'float 3s ease-in-out 1s infinite',
+        'float-slow': 'float 4s ease-in-out 2s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'shimmer': 'shimmer 2s ease-in-out infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 2s infinite',
+        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        slideInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(50px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        slideInRight: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+        float: {
+          '0%, 100%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(-20px)',
+          },
+        },
+        shimmer: {
+          '0%': {
+            backgroundPosition: '-200% 0',
+          },
+          '100%': {
+            backgroundPosition: '200% 0',
+          },
+        },
       },
     },
     fontFamily: {

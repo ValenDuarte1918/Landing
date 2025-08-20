@@ -7,12 +7,12 @@ import React, {
   useContext,
 } from "react";
 import {
-  IconX
-} from "@tabler/icons-react";
-import { cn } from "@/lib/utils";
+  XMarkIcon
+} from "@heroicons/react/24/outline";
+import { cn } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
-import { useOutsideClick } from "@/hooks/use-outside-click";
+import { useOutsideClick } from "@/utils";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -183,7 +183,7 @@ export const Card = ({
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
                 onClick={handleClose}
               >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                <XMarkIcon className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}

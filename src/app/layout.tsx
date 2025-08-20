@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import  PopupWhatsapp  from "@/components/PopupWhatsapp";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { PopupWhatsapp, Navbar, Footer } from "@/components";
+import { ToastProvider } from "@/components/ui";
 
 
 
@@ -27,10 +26,12 @@ export default function RootLayout({
       </head>
       <body className={`${manrope.className}`}>
         <ThemeProvider attribute="class">
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
-          <PopupWhatsapp />
+          <ToastProvider>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+            <PopupWhatsapp />
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

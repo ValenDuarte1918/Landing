@@ -1,7 +1,20 @@
 "use client";
 import React, { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+
+// Esquema de validación
+const contactSchema = z.object({
+  name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
+  email: z.string().email("Ingresa un email válido"),
+  subject: z.string().min(5, "El asunto debe tener al menos 5 caracteres"),
+  message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 export function ContactSection() {
   const {
@@ -9,17 +22,17 @@ export function ContactSection() {
     handleSubmit,
     reset,
     control,
-    formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm({
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
     mode: "onTouched",
   });
 
   const [isSuccess, setIsSuccess] = useState(false);
-  const [Message, setMessage] = useState("");
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: ContactFormData) => {
     const publicKey = "1wuDzjzzPzthPPBpJ"; 
 
     try {
@@ -31,12 +44,12 @@ export function ContactSection() {
       );
       console.log("Correo enviado con éxito:", response.status, response.text);
       setIsSuccess(true);
-      setMessage("¡Mensaje enviado con éxito!");
+      toast.success("¡Mensaje enviado con éxito!");
       reset(); // Limpia el formulario solo si el envío fue exitoso
     } catch (error) {
       console.error("Error al enviar el correo:", error);
       setIsSuccess(false);
-      setMessage("Hubo un error al enviar el mensaje.");
+      toast.error("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
     }
   };
 
@@ -51,7 +64,7 @@ export function ContactSection() {
             </p>
           </div>
           <div className="p-6">
-            {!isSubmitSuccessful && (
+            {!isSuccess && (
               <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <div className="mb-4">
                   <label
@@ -64,10 +77,7 @@ export function ContactSection() {
                     type="text"
                     id="full_name"
                     placeholder="Tu nombre"
-                    {...register("name", {
-                      required: "Tu nombre es requerido",
-                      maxLength: 80,
-                    })}
+                    {...register("name")}
                     className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring ${
                       errors.name
                         ? "border-red-600 focus:border-red-600 ring-red-100"
@@ -174,26 +184,14 @@ export function ContactSection() {
               </form>
             )}
 
-            {isSubmitSuccessful && isSuccess && (
+            {isSuccess && (
               <div className="text-center">
                 <h3 className="text-xl text-green-500">¡Mensaje enviado con éxito!</h3>
                 <button
                   className="inline-flex items-center justify-center px-3 py-2 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
-                  onClick={() => reset()}
+                  onClick={() => setIsSuccess(false)}
                 >
-                  Volver
-                </button>
-              </div>
-            )}
-
-            {isSubmitSuccessful && !isSuccess && (
-              <div className="text-center">
-                <h3 className="text-xl text-red-400">Hubo un error al enviar el mensaje</h3>
-                <button
-                  className="inline-flex items-center justify-center px-3 py-2 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none"
-                  onClick={() => reset()}
-                >
-                  Volver
+                  Enviar otro mensaje
                 </button>
               </div>
             )}
