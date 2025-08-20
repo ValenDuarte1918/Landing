@@ -28,7 +28,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
     <h2
       className={`${
         props.id === "ubicacion"
-          ? "max-w-sm mt-8 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-3xl"
+          ? "max-w-sm mt-8 text-2xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-3xl"
           : "max-w-3xl mt-4 text-3xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl w-2xl "
       }`}
     >
@@ -40,7 +40,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
     <p
       className={`${
         props.id === "ubicacion"
-          ? "max-w-xs p-4 text-base leading-normal text-gray-500 lg:text-lg xl:text-lg"
+          ? "max-w-xs p-4 text-base leading-normal text-gray-300 lg:text-lg xl:text-lg"
           : "max-w-3xl py-4 text-lg leading-normal text-white lg:text-xl xl:text-xl dark:text-gray-300"
       }`}
     >

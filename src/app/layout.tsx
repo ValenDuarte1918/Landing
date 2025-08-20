@@ -5,7 +5,6 @@ import "./globals.css";
 import  PopupWhatsapp  from "@/components/PopupWhatsapp";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ContactSection }  from "@/components/PopupWidget";
 
 
 
@@ -30,7 +29,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>
-          <ContactSection />
           <Footer />
           <PopupWhatsapp />
         </ThemeProvider>

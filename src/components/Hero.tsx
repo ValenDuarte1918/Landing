@@ -18,7 +18,7 @@ const HeroDescription = () => (
       Calidad y detalle en cada proyecto.
     </p>
     <p className="text-base font-light leading-relaxed text-white/70 lg:text-lg xl:text-xl max-w-3xl mx-auto mt-3">
-      Especialistas en granallado y preparación de superficies industriales
+      Especialistas en blasting y preparación de superficies.
     </p>
   </div>
 );
@@ -48,10 +48,10 @@ const HeroButtons = () => (
       rel="noopener"
       className="btn text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 ease-out will-change-transform hover:scale-105 rounded-xl"
     >
-      Solicitar presupuesto gratuito
+      Solicitar presupuesto
     </a>
     <a
-      href="#trabajos"
+      href="https://www.instagram.com/arenados_y_blasting/"
       className="btn btn-ghost text-white font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border border-btn/30 hover:bg-btn/15 hover:border-btn/50 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300 ease-out will-change-transform hover:scale-105 rounded-xl"
     >
       Ver nuestros trabajos

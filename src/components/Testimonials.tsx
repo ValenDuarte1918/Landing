@@ -7,7 +7,11 @@ import { Video } from "@/components/Video";
 export const Testimonials = () => {
   return (
     <Container>
-      <Video videoId="Video-1" />
+      <Video 
+        videoSrc="/img/Video-1.mp4"
+        title="Transformación Completa"
+        description="Mira el increíble antes y después de nuestros trabajos. Desde superficies deterioradas hasta acabados profesionales que superan las expectativas."
+      />
     </Container>
   );
 };
