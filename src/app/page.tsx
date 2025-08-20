@@ -372,8 +372,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                    <h3 className="text-white font-semibold text-lg mb-2">Granallado Industrial</h3>
-                    <p className="text-gray-200 text-sm">Proyecto completo de preparación de superficies metálicas</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Blasting motor armado</h3>
+                    <p className="text-gray-200 text-sm">Tratamiento de blasting a motor armado</p>
                   </div>
                 </div>
               </div>
@@ -390,8 +390,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                    <h3 className="text-white font-semibold text-lg mb-2">Blasting de Estructuras</h3>
-                    <p className="text-gray-200 text-sm">Limpieza especializada de estructuras metálicas grandes</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Arenado de embragues</h3>
+                    <p className="text-gray-200 text-sm">Limpieza para embragues. Ideal para la preparación de superficies antes del pintado.</p>
                   </div>
                 </div>
               </div>
@@ -408,8 +408,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                    <h3 className="text-white font-semibold text-lg mb-2">Zincado Protectivo</h3>
-                    <p className="text-gray-200 text-sm">Aplicación de recubrimiento anticorrosivo duradero</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Blasting a piezas de motos</h3>
+                    <p className="text-gray-200 text-sm">Aplicación de blasting a piezas de motos para volver a dejar las piezas como nuevas.</p>
                   </div>
                 </div>
               </div>
@@ -426,8 +426,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                    <h3 className="text-white font-semibold text-lg mb-2">Restauración de Maquinaria</h3>
-                    <p className="text-gray-200 text-sm">Recuperación completa de equipos industriales</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Restauración de carburadores</h3>
+                    <p className="text-gray-200 text-sm">Recuperación completa de carburadores para un rendimiento óptimo.</p>
                   </div>
                 </div>
               </div>
@@ -444,8 +444,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
-                    <h3 className="text-white font-semibold text-lg mb-2">Preparación de Tanques</h3>
-                    <p className="text-gray-200 text-sm">Tratamiento especializado para tanques industriales</p>
+                    <h3 className="text-white font-semibold text-lg mb-2">Preparacion de motores desarmados</h3>
+                    <p className="text-gray-200 text-sm">Tratamiento especializado de blasting para motores desarmados</p>
                   </div>
                 </div>
               </div>
@@ -463,7 +463,7 @@ export default function Home() {
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4">
                     <h3 className="text-white font-semibold text-lg mb-2">Acabados Especializados</h3>
-                    <p className="text-gray-200 text-sm">Aplicación de recubrimientos de alta calidad</p>
+                    <p className="text-gray-200 text-sm">Aplicación de recubrimientos de zincado de alta calidad</p>
                   </div>
                 </div>
               </div>
