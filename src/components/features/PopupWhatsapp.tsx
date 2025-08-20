@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { safeOpenUrl, isValidUrl } from "@/utils/security";
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const [lastClickTime, setLastClickTime] = useState(0);
 
   // Mostrar el botón después de un pequeño delay
   useEffect(() => {
@@ -13,8 +16,37 @@ const FloatingButton = () => {
   }, []);
 
   const handleClick = () => {
-    const whatsappUrl = `https://wa.link/lf75ot`;
-    window.open(whatsappUrl, "_blank");
+    const currentTime = Date.now();
+    const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://wa.link/lf75ot';
+    
+    // Rate limiting simple (máximo 5 clicks por minuto)
+    if (currentTime - lastClickTime < 60000) {
+      if (clickCount >= 5) {
+        console.warn('Demasiados clicks en WhatsApp. Intenta más tarde.');
+        return;
+      }
+      setClickCount(prev => prev + 1);
+    } else {
+      setClickCount(1);
+      setLastClickTime(currentTime);
+    }
+    
+    // Validar URL antes de abrir
+    if (!isValidUrl(whatsappUrl)) {
+      console.error('URL de WhatsApp no válida');
+      return;
+    }
+    
+    // Abrir URL de forma segura
+    safeOpenUrl(whatsappUrl);
+    
+    // Analytics seguro (sin datos personales)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: 'floating_button'
+      });
+    }
   };
 
   return (
