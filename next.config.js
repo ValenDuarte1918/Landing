@@ -46,9 +46,9 @@ const nextConfig = {
               script-src 'self' 'unsafe-eval' 'unsafe-inline' https://wa.link https://www.instagram.com;
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
               font-src 'self' https://fonts.gstatic.com;
-              img-src 'self' data: https: blob:;
-              connect-src 'self' https://wa.link https://api.whatsapp.com;
-              frame-src 'self' https://www.instagram.com https://wa.link;
+              img-src 'self' data: https: blob: https://maps.googleapis.com https://maps.gstatic.com https://www.google.com;
+              connect-src 'self' https://wa.link https://api.whatsapp.com https://maps.googleapis.com https://maps.gstatic.com https://www.google.com;
+              frame-src 'self' https://www.instagram.com https://wa.link https://www.google.com https://maps.google.com;
               object-src 'none';
               base-uri 'self';
               form-action 'self' https://wa.link;

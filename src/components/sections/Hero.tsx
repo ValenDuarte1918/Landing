@@ -3,22 +3,19 @@ import { Container } from "@/components/layout";
 
 const HeroHeader = () => (
   <div className="mb-4 sm:mb-6 animate-fade-in-up">
-    <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight drop-shadow-2xl animate-slide-in-up">
-      Superficies como nuevas,
-    </h1>
-    <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight drop-shadow-2xl mt-1 sm:mt-2 animate-slide-in-up" style={{animationDelay: '0.2s'}}>
-      <span className="text-blue-300 hover:text-blue-200 transition-colors duration-300">rendimiento asegurado</span>
+    <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-tight drop-shadow-2xl animate-slide-in-up font-industrial">
+      Soluciones en tratamientos de superficies
     </h1>
   </div>
 );
 
 const HeroDescription = () => (
   <div className="mb-6 sm:mb-8 animate-fade-in-delayed">
-    <p className="text-lg sm:text-xl font-normal leading-relaxed text-white/85 lg:text-2xl xl:text-3xl drop-shadow-lg max-w-4xl mx-auto animate-slide-in-up" style={{animationDelay: '0.4s'}}>
+    <p className="text-lg sm:text-xl font-normal leading-relaxed text-white/85 lg:text-2xl xl:text-3xl drop-shadow-lg max-w-4xl mx-auto animate-slide-in-up font-professional" style={{animationDelay: '0.4s'}}>
       Calidad y detalle en cada proyecto.
     </p>
-    <p className="text-sm sm:text-base font-light leading-relaxed text-white/70 lg:text-lg xl:text-xl max-w-3xl mx-auto mt-2 sm:mt-3 animate-slide-in-up" style={{animationDelay: '0.6s'}}>
-      Especialistas en blasting y preparación de superficies.
+    <p className="text-sm sm:text-base font-light leading-relaxed text-white/70 lg:text-lg xl:text-xl max-w-3xl mx-auto mt-2 sm:mt-3 animate-slide-in-up font-professional" style={{animationDelay: '0.6s'}}>
+      Especialistas en preparación de superficies metálicas.
     </p>
   </div>
 );

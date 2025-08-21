@@ -70,8 +70,9 @@ export default function BlastingPage() {
           <div className="absolute bottom-4 left-4 w-12 h-12 border border-btn/30 rounded-lg rotate-45 animate-pulse"></div>
         </div>
 
-        {/* Contenido principal con animaciones */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        {/* Contenido principal con mejores márgenes y espaciado */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="animate-slide-in-up hover-3d">
             <h2 className="text-3xl font-bold text-white mb-6">¿Qué es el Blasting con Micro Esferas?</h2>
             <div className="prose prose-lg prose-invert">
@@ -129,9 +130,11 @@ export default function BlastingPage() {
             </ul>
           </div>
         </div>
+        </div>
 
         {/* Aplicaciones con efectos 3D */}
-        <div className="glass-effect rounded-2xl p-8 mb-16 animate-fade-in-up">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="glass-effect rounded-2xl p-8 animate-fade-in-up">
           <h2 className="text-3xl font-bold text-white mb-8 text-center animate-slide-in-up">
             Aplicaciones Principales
             <div className="w-20 h-1 bg-gradient-to-r from-customBlue to-btn mx-auto mt-4 rounded-full"></div>
@@ -178,9 +181,11 @@ export default function BlastingPage() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CTA Final con efectos 3D */}
-        <div className="text-center glass-effect rounded-2xl p-10 border border-gray-700/50 hover-3d card-hover animate-fade-in-up relative overflow-hidden group">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center glass-effect rounded-2xl p-10 border border-gray-700/50 hover-3d card-hover animate-fade-in-up relative overflow-hidden group">
           {/* Elementos decorativos animados */}
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-4 right-4 w-8 h-8 border-2 border-customBlue/30 rounded-full animate-spin-slow"></div>
@@ -227,6 +232,7 @@ export default function BlastingPage() {
               </Link>
             </div>
           </div>
+        </div>
         </div>
       </Container>
     </div>

@@ -2,7 +2,7 @@ import { ChartBarSquareIcon,} from "@heroicons/react/24/solid";
 import { FaLightbulb } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
 import benefitOneImg from "../../public/img/img-sobreNosotros.jpg";
-import benefitTwoImg from "../../public/img/img-sobreNosotros-2.jpg";
+import benefitTwoImg from "../../public/img/img-motor-perfil.jpg";
 
 const benefitOne = {
   title: "Soluciones a medida para cada desafío",

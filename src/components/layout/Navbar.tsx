@@ -121,7 +121,7 @@ export const Navbar = () => {
             <li key={index}>
               <Link
                 href={`#${menu.id}`}
-                className="text-white hover:text-white hover:bg-white/20 hover:backdrop-blur-sm transition-all duration-200 ease-out text-lg font-medium px-4 py-2 rounded-lg will-change-transform hover:scale-105 hover:shadow-md"
+                className="text-white hover:text-white hover:bg-white/20 hover:backdrop-blur-sm transition-all duration-200 ease-out text-lg font-medium px-4 py-2 rounded-lg will-change-transform hover:scale-105 hover:shadow-md font-professional"
               >
                 {menu.name}
               </Link>
@@ -134,7 +134,7 @@ export const Navbar = () => {
       <div className="navbar-end">
         <Link
           href="https://wa.link/lf75ot"
-          className="btn hidden lg:flex text-white font-semibold text-base px-6 py-2 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-sm shadow-md hover:shadow-xl transition-all duration-200 ease-out will-change-transform hover:scale-105"
+          className="btn hidden lg:flex text-white font-semibold text-base px-6 py-2 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-sm shadow-md hover:shadow-xl transition-all duration-200 ease-out will-change-transform hover:scale-105 font-professional"
         >
           Presupuestos
         </Link>
@@ -160,7 +160,7 @@ export const Navbar = () => {
                       <Link 
                         href={`#${menu.id}`} 
                         onClick={closeMenu}
-                        className="block text-white hover:text-white hover:bg-white/20 hover:backdrop-blur-sm transition-all duration-200 ease-out text-lg font-medium py-4 px-4 rounded-lg will-change-transform hover:scale-105 hover:shadow-md"
+                        className="block text-white hover:text-white hover:bg-white/20 hover:backdrop-blur-sm transition-all duration-200 ease-out text-lg font-medium py-4 px-4 rounded-lg will-change-transform hover:scale-105 hover:shadow-md font-professional"
                       >
                         {menu.name}
                       </Link>
@@ -172,7 +172,7 @@ export const Navbar = () => {
                   <Link
                     href="https://wa.link/lf75ot"
                     onClick={closeMenu}
-                    className="btn w-full text-white font-semibold text-lg py-4 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-sm transition-all duration-200 hover:scale-105 will-change-transform hover:shadow-lg"
+                    className="btn w-full text-white font-semibold text-lg py-4 bg-btn/25 hover:bg-btn/40 border border-btn/40 hover:border-btn/60 backdrop-blur-sm transition-all duration-200 hover:scale-105 will-change-transform hover:shadow-lg font-professional"
                   >
                     Presupuestos
                   </Link>

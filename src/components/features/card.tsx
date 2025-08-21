@@ -117,7 +117,7 @@ const data = [
   {
     category: " ",
     title: "Granallado",
-    src: "/img/imgGranallado.jpg",
+    src: "/img/img-arenado.jpg",
     content: <DummyContent />,
   },
   {

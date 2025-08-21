@@ -10,9 +10,9 @@ import { ToastProvider } from "@/components/ui";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arenados y Blasting | Tratamientos de Superficies",
-  description: "Ofrecemos servicios de arenado y blasting para el tratamiento de superficies metálicas con más de 15 años de experiencia.",
-  keywords: "arenado, blasting, granallado, zincado, tratamiento superficies, preparación metales",
+  title: "Arenados y Blasting | Soluciones en tratamientos de superficies",
+  description: "Especialistas en preparación de superficies metálicas. Arenado y blasting para talleres, restauradores y mecánicos.",
+  keywords: "arenado, blasting, granallado, zincado, tratamiento superficies, preparación metales, talleres, restauración",
   authors: [{ name: "Arenados y Blasting" }],
   creator: "Arenados y Blasting",
   publisher: "Arenados y Blasting",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://arenadosyblasting.com",
-    title: "Arenados y Blasting | Tratamientos de Superficies",
-    description: "Servicios profesionales de arenado, blasting y granallado con más de 15 años de experiencia.",
+    title: "Arenados y Blasting | Soluciones en tratamientos de superficies",
+    description: "Especialistas en preparación de superficies metálicas. Calidad y detalle en cada proyecto.",
     siteName: "Arenados y Blasting",
   },
   twitter: {
@@ -59,6 +59,11 @@ export default function RootLayout({
     <html lang="es" className="!scroll-smooth bg-snow"  suppressHydrationWarning>
         <head>
         <link rel="icon" href="/icon-page.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
       </head>
       <body className={`${manrope.className}`}>
         <ThemeProvider attribute="class">

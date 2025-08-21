@@ -68,8 +68,9 @@ export default function ZincadoPage() {
           <div className="absolute bottom-4 left-4 w-12 h-12 border border-emerald-500/30 rounded-lg rotate-45 animate-pulse"></div>
         </div>
 
-        {/* Contenido principal */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        {/* Contenido principal con mejor espaciado */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">¿Qué es el Zincado?</h2>
             <div className="prose prose-lg prose-invert">
@@ -125,11 +126,13 @@ export default function ZincadoPage() {
             </ul>
           </div>
         </div>
+        </div>
 
         {/* Tipos de zincado */}
-        <div className="bg-gray-800/30 rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Tipos de Zincado</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="bg-gray-800/30 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Tipos de Zincado</h2>
+            <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-800/50 rounded-xl p-6">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
@@ -162,11 +165,13 @@ export default function ZincadoPage() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* Aplicaciones comunes */}
-        <div className="bg-gray-800/30 rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Aplicaciones Comunes</h2>
-          <div className="grid md:grid-cols-4 gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="bg-gray-800/30 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Aplicaciones Comunes</h2>
+            <div className="grid md:grid-cols-4 gap-4">
             <div className="text-center p-4">
               <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,9 +211,11 @@ export default function ZincadoPage() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CTA Final */}
-        <div className="text-center bg-gray-800/50 rounded-2xl p-10 border border-gray-700/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center bg-gray-800/50 rounded-2xl p-10 border border-gray-700/50">
           <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
             ¿Necesitas protección duradera para tus materiales?
           </h3>
@@ -235,6 +242,7 @@ export default function ZincadoPage() {
               Volver al inicio
             </Link>
           </div>
+        </div>
         </div>
       </Container>
     </div>

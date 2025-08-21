@@ -81,13 +81,13 @@ export function Footer() {
 
           {/* Columna 2 - Enlaces rápidos */}
           <div className="space-y-4 animate-fade-in animation-delay-500">
-            <h3 className="text-white font-semibold text-lg bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Enlaces Rápidos</h3>
+            <h3 className="text-white font-semibold text-lg bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-industrial">Enlaces Rápidos</h3>
             <div className="grid grid-cols-2 gap-3 text-sm">
               {navigation.map((item, index) => (
                 <Link
                   key={index}
                   href={`#${item.id}`}
-                  className="text-gray-300 hover:text-btn transition-all duration-300 transform-gpu hover:translate-x-1 hover:scale-105 relative group"
+                  className="text-gray-300 hover:text-btn transition-all duration-300 transform-gpu hover:translate-x-1 hover:scale-105 relative group font-professional"
                 >
                   <span className="relative z-10">{item.name}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-btn/10 to-transparent rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -97,7 +97,7 @@ export function Footer() {
                 <Link
                   key={index}
                   href={service.href}
-                  className="text-gray-300 hover:text-btn transition-all duration-300 transform-gpu hover:translate-x-1 hover:scale-105 relative group"
+                  className="text-gray-300 hover:text-btn transition-all duration-300 transform-gpu hover:translate-x-1 hover:scale-105 relative group font-professional"
                 >
                   <span className="relative z-10">{service.name}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-btn/10 to-transparent rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -108,7 +108,7 @@ export function Footer() {
 
           {/* Columna 3 - Redes sociales y ubicación */}
           <div className="space-y-4 animate-fade-in animation-delay-700">
-            <h3 className="text-white font-semibold text-lg bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Síguenos</h3>
+            <h3 className="text-white font-semibold text-lg bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-industrial">Síguenos</h3>
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/share/1EVY87cVeg/"
@@ -155,11 +155,11 @@ export function Footer() {
 
         {/* Footer inferior compacto */}
         <div className="border-t border-white/10 pt-6 pb-4 flex flex-col md:flex-row justify-between items-center gap-2 text-sm animate-fade-in animation-delay-1000">
-          <div className="text-gray-400 group hover:text-gray-300 transition-colors duration-300">
+          <div className="text-gray-400 group hover:text-gray-300 transition-colors duration-300 font-professional">
             © {new Date().getFullYear()} Arenados y Blasting. Todos los derechos reservados.
           </div>
           
-          <div className="text-gray-400">
+          <div className="text-gray-400 font-professional">
             Desarrollado por{" "}
             <a
               href="https://www.linkedin.com/in/valentin-duarte-426945265/"

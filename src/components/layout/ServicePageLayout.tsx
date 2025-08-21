@@ -1,15 +1,12 @@
 import React from "react";
 import { Container } from "./Container";
 import Link from "next/link";
-import Image from "next/image";
 
 interface ServicePageLayoutProps {
   title: string;
   subtitle: string;
   description: string;
   badgeText: string;
-  mainImageSrc: string;
-  mainImageAlt: string;
   accentColor?: string;
   children: React.ReactNode;
 }
@@ -19,8 +16,6 @@ export default function ServicePageLayout({
   subtitle,
   description,
   badgeText,
-  mainImageSrc,
-  mainImageAlt,
   accentColor = "btn", // Color por defecto
   children
 }: ServicePageLayoutProps) {
@@ -84,7 +79,7 @@ export default function ServicePageLayout({
               </svg>
               Volver al inicio
             </Link>
-            <h1 className="text-xl font-semibold text-white animate-slide-in-right">{title}</h1>
+            <h1 className="text-xl font-semibold text-white animate-slide-in-right font-industrial">{title}</h1>
           </div>
         </Container>
       </div>
@@ -97,7 +92,7 @@ export default function ServicePageLayout({
             <span className={`text-${colors.primary} font-medium text-sm tracking-wide`}>{badgeText}</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-slide-in-up">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-slide-in-up font-industrial">
             {subtitle.split(' ').map((word, index) => {
               // Resaltar la última palabra o palabras específicas
               if (index === subtitle.split(' ').length - 1 || word.includes('Precisión') || word.includes('Vidrio') || word.includes('Protección')) {
@@ -107,25 +102,9 @@ export default function ServicePageLayout({
             })}
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed font-professional">
             {description}
           </p>
-        </div>
-
-        {/* Imagen principal con efecto 3D */}
-        <div className="relative h-96 rounded-2xl overflow-hidden mb-16 group animate-slide-in-up transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-btn/20">
-          <div className={`absolute inset-0 bg-gradient-to-r from-${colors.primary}/20 to-${colors.secondary}/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10`}></div>
-          <Image
-            src={mainImageSrc}
-            alt={mainImageAlt}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent group-hover:from-gray-900/40 transition-all duration-500"></div>
-          
-          {/* Elementos decorativos 3D */}
-          <div className={`absolute top-4 right-4 w-16 h-16 border-2 border-${colors.primary}/30 rounded-full animate-spin-slow opacity-70`}></div>
-          <div className={`absolute bottom-4 left-4 w-12 h-12 border border-${colors.secondary}/30 rounded-lg rotate-45 animate-pulse`}></div>
         </div>
 
         {/* Contenido dinámico */}
@@ -142,10 +121,10 @@ export default function ServicePageLayout({
           </div>
           
           <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 font-sans">
+            <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 font-industrial">
               ¿Necesitas este servicio?
             </h3>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-light">
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-light font-professional">
               Contáctanos para una consulta gratuita y obtén el mejor tratamiento para tus materiales.
             </p>
             

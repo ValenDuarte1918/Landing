@@ -43,8 +43,6 @@ export default function GranalladoPage() {
       subtitle="Granallado de Alta Precisión"
       description="Proceso especializado para la limpieza y preparación de superficies metálicas con los más altos estándares de calidad."
       badgeText="Tratamiento de Granallado"
-      mainImageSrc="/img/imgGranallado.jpg"
-      mainImageAlt="Proceso de Granallado"
       accentColor="btn"
     >
       {/* Beneficios usando el componente reutilizable */}

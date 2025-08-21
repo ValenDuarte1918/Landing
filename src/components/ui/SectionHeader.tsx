@@ -55,7 +55,7 @@ export function SectionHeader({
           )}
 
           {/* Título principal */}
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6 animate-fade-in animation-delay-500">
+          <h2 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6 animate-fade-in animation-delay-500 font-industrial">
             {renderTitle()}
           </h2>
 
@@ -66,7 +66,7 @@ export function SectionHeader({
 
           {/* Descripción */}
           {description && (
-            <p className="text-lg lg:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto animate-fade-in animation-delay-1000">
+            <p className="text-lg lg:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto animate-fade-in animation-delay-1000 font-professional">
               {description}
             </p>
           )}

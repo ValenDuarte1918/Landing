@@ -30,7 +30,7 @@ export function BenefitItem({ text, delay = 0 }: BenefitItemProps) {
 export function BenefitsList({ benefits, title = "Beneficios Clave", accentColor = "btn" }: BenefitsListProps) {
   return (
     <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/30 rounded-2xl p-8 mb-16 hover:bg-gray-800/40 transition-all duration-300 animate-fade-in-up">
-      <h2 className="text-3xl font-bold text-white mb-8 text-center">{title}</h2>
+      <h2 className="text-3xl font-bold text-white mb-8 text-center font-industrial">{title}</h2>
       <ul className="space-y-4 max-w-2xl mx-auto">
         {benefits.map((benefit, index) => (
           <BenefitItem 

@@ -57,11 +57,11 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           
           <div className="relative z-10">
             <div className="flex flex-col w-full mt-4">
-              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent animate-fade-in animation-delay-300">
+              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent animate-fade-in animation-delay-300 font-industrial">
                 {data.title}
               </h3>
 
-              <p className="max-w-2xl py-4 text-lg leading-normal text-gray-300 lg:text-xl xl:text-xl animate-fade-in animation-delay-500">
+              <p className="max-w-2xl py-4 text-lg leading-normal text-gray-300 lg:text-xl xl:text-xl animate-fade-in animation-delay-500 font-professional">
                 {data.desc}
               </p>
             </div>
@@ -91,10 +91,10 @@ function Benefit(props: any) {
           })}
         </div>
         <div className="flex-1">
-          <h4 className="text-xl font-medium text-white group-hover:text-btn transition-colors duration-300">
+          <h4 className="text-xl font-medium text-white group-hover:text-btn transition-colors duration-300 font-industrial">
             {props.title}
           </h4>
-          <p className="mt-1 text-gray-300 text-opacity-90 group-hover:text-white transition-colors duration-300">
+          <p className="mt-1 text-gray-300 text-opacity-90 group-hover:text-white transition-colors duration-300 font-professional">
             {props.children}
           </p>
         </div>

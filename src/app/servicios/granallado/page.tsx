@@ -68,8 +68,9 @@ export default function GranalladoPage() {
           <div className="absolute bottom-4 left-4 w-12 h-12 border border-customBlue/30 rounded-lg rotate-45 animate-pulse"></div>
         </div>
 
-        {/* Contenido principal */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        {/* Contenido principal con mejor espaciado */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">¿Qué es el Granallado?</h2>
             <div className="prose prose-lg prose-invert">
@@ -125,11 +126,13 @@ export default function GranalladoPage() {
             </ul>
           </div>
         </div>
+        </div>
 
         {/* Proceso paso a paso */}
-        <div className="bg-gray-800/30 rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Nuestro Proceso</h2>
-          <div className="grid md:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="bg-gray-800/30 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Nuestro Proceso</h2>
+            <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-btn rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
@@ -160,9 +163,11 @@ export default function GranalladoPage() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* CTA Final */}
-        <div className="text-center bg-gray-800/50 rounded-2xl p-10 border border-gray-700/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center bg-gray-800/50 rounded-2xl p-10 border border-gray-700/50">
           <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
             ¿Necesitas un presupuesto para granallado?
           </h3>
@@ -189,6 +194,7 @@ export default function GranalladoPage() {
               Volver al inicio
             </Link>
           </div>
+        </div>
         </div>
       </Container>
     </div>
