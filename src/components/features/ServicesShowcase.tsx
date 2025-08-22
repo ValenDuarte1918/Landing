@@ -137,7 +137,7 @@ const ServicesShowcase = () => {
         'Soldaduras de alta resistencia',
         'Certificación de calidad'
       ],
-      href: '#contacto'
+      href: '/servicios/soldaduras'
     }
   ];
 

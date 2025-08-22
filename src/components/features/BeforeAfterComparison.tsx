@@ -32,8 +32,20 @@ export function BeforeAfterComparison({
     setSliderPosition(Math.max(0, Math.min(100, percentage)));
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.touches[0].clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+    setSliderPosition(Math.max(0, Math.min(100, percentage)));
+  };
+
   const handleMouseDown = () => setIsDragging(true);
   const handleMouseUp = () => setIsDragging(false);
+  
+  const handleTouchStart = () => setIsDragging(true);
+  const handleTouchEnd = () => setIsDragging(false);
 
   return (
     <div className="relative bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500">
@@ -42,11 +54,14 @@ export function BeforeAfterComparison({
         <p className="text-gray-300 mb-6 font-professional">{description}</p>
         
         <div 
-          className="relative h-96 overflow-hidden rounded-xl cursor-ew-resize select-none"
+          className="relative h-96 overflow-hidden rounded-xl cursor-ew-resize select-none touch-none"
           onMouseMove={handleMouseMove}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
+          onTouchMove={handleTouchMove}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           {/* Imagen "Después" (fondo) */}
           <Image
@@ -93,7 +108,8 @@ export function BeforeAfterComparison({
         </div>
         
         <div className="mt-4 text-center text-sm text-gray-400 font-professional">
-          Arrastra el control para comparar el antes y después
+          <span className="hidden sm:inline">Arrastra el control para comparar el antes y después</span>
+          <span className="sm:hidden">Toca y arrastra para comparar el antes y después</span>
         </div>
       </div>
     </div>

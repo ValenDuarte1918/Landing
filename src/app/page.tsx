@@ -206,10 +206,11 @@ export default function Home() {
           </div>
 
           {/* Grid de servicios */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 mb-12 px-4">
             {/* Servicio 1 - Granallado */}
             <Link href="/servicios/granallado" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/img-arenado.jpg" 
                   alt="Servicio de Granallado"
@@ -224,9 +225,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4 font-sans">Granallado</h3>
-                <p className="text-gray-300 leading-relaxed font-light mb-6">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3 font-sans">Granallado</h3>
+                <p className="text-gray-300 leading-relaxed font-light mb-4 text-sm">
                   Proceso esencial para la limpieza y preparación de superficies metálicas. 
                   Eliminamos óxido, pintura vieja e impurezas, dejando la superficie perfecta para tratamientos posteriores.
                 </p>
@@ -241,7 +242,7 @@ export default function Home() {
 
             {/* Servicio 2 - Blasting */}
             <Link href="/servicios/blasting" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/imgTrabajos4.webp" 
                   alt="Servicio de Blasting"
@@ -256,9 +257,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4 font-sans">Blasting</h3>
-                <p className="text-gray-300 leading-relaxed font-light mb-6">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3 font-sans">Blasting</h3>
+                <p className="text-gray-300 leading-relaxed font-light mb-4 text-sm">
                   Técnica avanzada de limpieza con abrasivos especializados. 
                   Ideal para remover recubrimientos resistentes y preparar superficies para acabados de alta calidad.
                 </p>
@@ -273,7 +274,7 @@ export default function Home() {
 
             {/* Servicio 3 - Zincado */}
             <Link href="/servicios/zincado" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/1.jpg" 
                   alt="Servicio de Zincado"
@@ -288,9 +289,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4 font-sans">Zincado</h3>
-                <p className="text-gray-300 leading-relaxed font-light mb-6">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3 font-sans">Zincado</h3>
+                <p className="text-gray-300 leading-relaxed font-light mb-4 text-sm">
                   Recubrimiento protector que garantiza resistencia contra la corrosión. 
                   Perfecto para estructuras expuestas y componentes que requieren máxima durabilidad.
                 </p>
@@ -302,6 +303,39 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            {/* Servicio 4 - Soldaduras Especiales */}
+            <Link href="/servicios/soldaduras" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/img/img-soldadura.jpg" 
+                  alt="Servicio de Soldaduras Especiales"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 1.5-5 1.5-5s1.5 3 1.5 5c2-1 3.5-2.5 3.5-2.5s1.5 3 1.5 5c2-1 3.5-2.5 3.5-2.5s1.5 3 1.5 5a8 8 0 01-4.343 1.657z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-3 font-sans">Soldaduras Especiales</h3>
+                <p className="text-gray-300 leading-relaxed font-light mb-4 text-sm">
+                  Servicios especializados de soldadura TIG y MIG para reparación y refuerzo de piezas industriales. 
+                  Soldaduras de alta resistencia con certificación de calidad garantizada.
+                </p>
+                <div className="flex items-center text-btn font-medium text-sm">
+                  <span>Ver detalles</span>
+                  <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
           </div>
 
           {/* CTA section */}

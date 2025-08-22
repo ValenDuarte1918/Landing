@@ -113,6 +113,40 @@ const ZincadoContent = () => {
   );
 };
 
+const SoldadurasContent = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"soldaduras-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+              Las soldaduras especiales representan el más alto nivel de expertise en 
+              unión de metales, aplicando técnicas TIG y MIG de precisión.
+              </span>{" "}
+              Nuestros servicios especializados abarcan desde reparación de piezas críticas 
+              hasta refuerzo estructural de equipos industriales, garantizando soldaduras 
+              de alta resistencia con certificación de calidad.
+              Ideales para aplicaciones que demandan máxima confiabilidad y durabilidad 
+              en condiciones operativas exigentes.
+            </p>
+            <Image
+              src="/img/img-detalles.jpg"
+              alt="Soldaduras Especiales"
+              height="500"
+              width="500"
+              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+            />
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
 const data = [
   {
     category: " ",
@@ -131,6 +165,12 @@ const data = [
     title: "Zincado",
     src: "/img/1.jpg",
     content: <ZincadoContent />,
+  },
+  {
+    category: "",
+    title: "Soldaduras Especiales",
+    src: "/img/img-detalles.jpg",
+    content: <SoldadurasContent />,
   },
 ];
 
