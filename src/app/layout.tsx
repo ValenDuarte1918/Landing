@@ -4,6 +4,8 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { PopupWhatsapp, Navbar, Footer } from "@/components";
 import { ToastProvider } from "@/components/ui";
+import CookieBanner from "@/components/ui/CookieBanner";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 
 
@@ -72,8 +74,10 @@ export default function RootLayout({
             <div>{children}</div>
             <Footer />
             <PopupWhatsapp />
+            <CookieBanner />
           </ToastProvider>
         </ThemeProvider>
+        <GoogleAnalytics />
       </body>
     </html>
   );
