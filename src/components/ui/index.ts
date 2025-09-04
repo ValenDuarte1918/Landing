@@ -6,4 +6,3 @@ export { Video } from './Video';
 export { ToastProvider } from './ToastProvider';
 export { ScrollAnimation, StaggerContainer } from './ScrollAnimation';
 export { Modal, ImageModal } from './Modal';
-export { DropdownMenu, ServicesMenu } from './DropdownMenu';

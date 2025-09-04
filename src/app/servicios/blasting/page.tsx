@@ -197,7 +197,7 @@ export default function BlastingPage() {
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 animate-slide-in-up">
               ¿Tu pieza necesita un acabado{" "}
-              <span className="bg-gradient-to-r from-customBlue to-btn bg-clip-text text-transparent animate-shimmer">
+              <span className="text-customBlue font-bold animate-shimmer">
                 brillante perfecto
               </span>?
             </h3>

@@ -15,6 +15,7 @@ export function Footer() {
   const services = [
     { name: "Granallado", href: "/servicios/granallado" },
     { name: "Blasting", href: "/servicios/blasting" },
+    { name: "Soldaduras", href: "/servicios/soldaduras" },
     { name: "Zincado", href: "/servicios/zincado" },
   ];
 
