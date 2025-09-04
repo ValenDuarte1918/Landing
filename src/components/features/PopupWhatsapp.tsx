@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { safeOpenUrl, isValidUrl } from "@/utils/security";
+import { trackEvents } from "../analytics/trackEvents";
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,6 +41,9 @@ const FloatingButton = () => {
     
     // Abrir URL de forma segura
     safeOpenUrl(whatsappUrl);
+    
+    // Track evento de WhatsApp
+    trackEvents.whatsappClick('popup_button');
     
     // Analytics seguro (sin datos personales)
     if (typeof window !== 'undefined' && (window as any).gtag) {

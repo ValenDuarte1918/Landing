@@ -1,9 +1,16 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { Container } from "@/components/layout";
 import Link from "next/link";
 import Image from "next/image";
+import { trackEvents } from "@/components/analytics/trackEvents";
 
 export default function ZincadoPage() {
+  useEffect(() => {
+    // Track page view
+    trackEvents.serviceView('zincado');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-900 relative overflow-hidden">
       {/* Elementos animados de fondo */}

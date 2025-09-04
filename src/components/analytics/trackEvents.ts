@@ -12,12 +12,38 @@ export const trackEvents = {
     });
   },
 
+  // Redes sociales
+  socialClick: (platform: string, location: string) => {
+    event({
+      action: 'click',
+      category: 'social',
+      label: `${platform}_${location}`,
+    });
+  },
+
   // Navegación de servicios
   serviceView: (serviceName: string) => {
     event({
       action: 'view',
       category: 'service',
       label: serviceName,
+    });
+  },
+
+  serviceClick: (serviceName: string, source: string) => {
+    event({
+      action: 'click',
+      category: 'service',
+      label: `${serviceName}_${source}`,
+    });
+  },
+
+  // Enlaces de navegación
+  navigationClick: (linkName: string, section: string) => {
+    event({
+      action: 'click',
+      category: 'navigation',
+      label: `${linkName}_${section}`,
     });
   },
 

@@ -1,3 +1,4 @@
+"use client";
 import React, {Suspense} from "react";
 import { Container, Hero, SectionTitle, Testimonials } from "@/components";
 import { ScrollAnimation } from "@/components/ui";
@@ -7,6 +8,7 @@ import {
 } from "@/components/features";
 import AppleCardsCarouselDemo from "@/components/features/card";
 import Link from "next/link";
+import { trackEvents } from "@/components/analytics/trackEvents";
 
 
 export default function Home() {
@@ -209,7 +211,11 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6 mb-12 px-4">
             {/* Servicio 1 - Granallado */}
-            <Link href="/servicios/granallado" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
+            <Link 
+              href="/servicios/granallado" 
+              className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block"
+              onClick={() => trackEvents.serviceClick('granallado', 'homepage')}
+            >
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/img-arenado.jpg" 
@@ -241,7 +247,11 @@ export default function Home() {
             </Link>
 
             {/* Servicio 2 - Blasting */}
-            <Link href="/servicios/blasting" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
+            <Link 
+              href="/servicios/blasting" 
+              className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block"
+              onClick={() => trackEvents.serviceClick('blasting', 'homepage')}
+            >
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/imgTrabajos4.webp" 
@@ -273,7 +283,11 @@ export default function Home() {
             </Link>
 
             {/* Servicio 3 - Zincado */}
-            <Link href="/servicios/zincado" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
+            <Link 
+              href="/servicios/zincado" 
+              className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block"
+              onClick={() => trackEvents.serviceClick('zincado', 'homepage')}
+            >
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/1.jpg" 
@@ -305,7 +319,11 @@ export default function Home() {
             </Link>
 
             {/* Servicio 4 - Soldaduras Especiales */}
-            <Link href="/servicios/soldaduras" className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block">
+            <Link 
+              href="/servicios/soldaduras" 
+              className="group bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500 block"
+              onClick={() => trackEvents.serviceClick('soldaduras', 'homepage')}
+            >
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/img/img-soldadura.jpg" 

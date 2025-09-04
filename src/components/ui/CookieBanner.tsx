@@ -4,11 +4,12 @@ import { trackEvents } from '../analytics/trackEvents';
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
-  const cookiesBannerEnabled = process.env.NEXT_PUBLIC_ENABLE_COOKIES_BANNER === 'true';
 
   useEffect(() => {
-    // Solo mostrar si está habilitado en las variables de entorno
-    if (!cookiesBannerEnabled) return;
+    // Para desarrollo, limpiar localStorage siempre (quitar en producción)
+    if (process.env.NODE_ENV === 'development') {
+      localStorage.removeItem('cookiesAccepted');
+    }
     
     // Para asegurar que funcione, esperamos un poco después del montaje
     const timer = setTimeout(() => {
@@ -16,10 +17,10 @@ export function CookieBanner() {
       if (!cookieAccepted || cookieAccepted === 'false') {
         setIsVisible(true);
       }
-    }, 1000); // Esperamos 1 segundo para que la página cargue completamente
+    }, 2000); // Aumentamos a 2 segundos para que la página cargue completamente
 
     return () => clearTimeout(timer);
-  }, [cookiesBannerEnabled]);
+  }, []);
 
   const acceptCookies = () => {
     localStorage.setItem('cookiesAccepted', 'true');
@@ -33,7 +34,7 @@ export function CookieBanner() {
     setIsVisible(false);
   };
 
-  if (!isVisible || !cookiesBannerEnabled) return null;
+  if (!isVisible) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-gray-900 border-t-2 border-btn p-4 z-[9999] animate-slide-up shadow-2xl">

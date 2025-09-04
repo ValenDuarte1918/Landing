@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "./Container";
+import { trackEvents } from "../analytics/trackEvents";
 
 export function Footer() {
   const navigation = [
@@ -116,6 +119,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-xl border border-gray-700/50 hover:border-blue-500/50 hover:bg-gradient-to-br hover:from-blue-500/20 hover:to-blue-600/20 transition-all duration-500 transform-gpu hover:scale-110 hover:-translate-y-1 hover:rotate-3 group relative overflow-hidden"
+                onClick={() => trackEvents.socialClick('facebook', 'footer')}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <Facebook size={20} className="text-gray-400 group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
@@ -125,6 +129,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-xl border border-gray-700/50 hover:border-pink-500/50 hover:bg-gradient-to-br hover:from-pink-500/20 hover:to-pink-600/20 transition-all duration-500 transform-gpu hover:scale-110 hover:-translate-y-1 hover:rotate-3 group relative overflow-hidden"
+                onClick={() => trackEvents.socialClick('instagram', 'footer')}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <Instagram size={20} className="text-gray-400 group-hover:text-pink-400 transition-colors duration-300 relative z-10" />
