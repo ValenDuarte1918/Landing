@@ -4,6 +4,8 @@ import Script from 'next/script';
 
 // Configuración de Google Analytics
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+const GA_DEBUG = process.env.NEXT_PUBLIC_GA_DEBUG === 'true';
+const ANALYTICS_ENABLED = process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true';
 
 // Función para enviar eventos a GA
 export const gtag = (...args: any[]) => {

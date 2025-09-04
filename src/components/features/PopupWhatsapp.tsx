@@ -18,6 +18,7 @@ const FloatingButton = () => {
   const handleClick = () => {
     const currentTime = Date.now();
     const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL || 'https://wa.link/lf75ot';
+    const businessName = process.env.NEXT_PUBLIC_BUSINESS_NAME || 'Arenados y Blasting';
     
     // Rate limiting simple (máximo 5 clicks por minuto)
     if (currentTime - lastClickTime < 60000) {

@@ -7,17 +7,20 @@ import { ToastProvider } from "@/components/ui";
 import CookieBanner from "@/components/ui/CookieBanner";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
-
-
 const manrope = Manrope({ subsets: ["latin"] });
 
+// Configuración dinámica de metadata usando variables de entorno
+const businessName = process.env.NEXT_PUBLIC_BUSINESS_NAME || "Arenados y Blasting";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://arenadosyblasting.com";
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@arenadosyblasting.com";
+
 export const metadata: Metadata = {
-  title: "Arenados y Blasting | Soluciones en tratamientos de superficies",
+  title: `${businessName} | Soluciones en tratamientos de superficies`,
   description: "Especialistas en preparación de superficies metálicas. Arenado y blasting para talleres, restauradores y mecánicos.",
   keywords: "arenado, blasting, granallado, zincado, tratamiento superficies, preparación metales, talleres, restauración",
-  authors: [{ name: "Arenados y Blasting" }],
-  creator: "Arenados y Blasting",
-  publisher: "Arenados y Blasting",
+  authors: [{ name: businessName }],
+  creator: businessName,
+  publisher: businessName,
   robots: {
     index: true,
     follow: true,

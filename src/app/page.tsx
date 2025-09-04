@@ -385,13 +385,13 @@ export default function Home() {
                 beforeImage="/img/img-motor-abajo-antes.jpg"
                 afterImage="/img/img-motor.jpg"
                 title="Restauración de Motor"
-                description="Proceso completo de granallado y acabado para motor automotriz"
+                description="Proceso completo de granallado y blasting para motor"
               />
               <BeforeAfterComparison
                 beforeImage="/img/img-arenado-antes.jpg"
                 afterImage="/img/img-arenado.jpg"
-                title="Blasting de Estructura"
-                description="Preparación de superficie para pintura industrial"
+                title="Granallado de Estructura Metálica"
+                description="Preparación de superficie para posterior pintura"
               />
             </div>
           </div>

@@ -157,7 +157,7 @@ export function Footer() {
         {/* Footer inferior compacto */}
         <div className="border-t border-white/10 pt-6 pb-4 flex flex-col md:flex-row justify-between items-center gap-2 text-sm animate-fade-in animation-delay-1000">
           <div className="text-gray-400 group hover:text-gray-300 transition-colors duration-300 font-professional">
-            © {new Date().getFullYear()} Arenados y Blasting. Todos los derechos reservados.
+            © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_BUSINESS_NAME || 'Arenados y Blasting'}. Todos los derechos reservados.
           </div>
           
           <div className="text-gray-400 font-professional">
