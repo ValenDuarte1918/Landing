@@ -36,11 +36,20 @@ export const metadata: Metadata = {
     title: "Arenados y Blasting | Soluciones en tratamientos de superficies",
     description: "Especialistas en preparación de superficies metálicas. Calidad y detalle en cada proyecto.",
     siteName: "Arenados y Blasting",
+    images: [
+      {
+        url: `${siteUrl}/img/logo-redes.png`,
+        width: 1200,
+        height: 630,
+        alt: "Arenados y Blasting - Logo"
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Arenados y Blasting | Tratamientos de Superficies",
     description: "Servicios profesionales de arenado, blasting y granallado.",
+    images: [`${siteUrl}/img/logo-redes.png`],
   },
   verification: {
     google: process.env.GOOGLE_VERIFICATION,
