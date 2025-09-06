@@ -8,15 +8,18 @@ const nextConfig = {
   // Configuración de compresión
   compress: true,
   
-  // Optimizaciones de rendimiento seguras
+  // Optimizaciones de rendimiento mejoradas
   experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
+    optimizePackageImports: ['framer-motion', 'lucide-react', 'react-icons'],
     gzipSize: true,
+    optimizeServerReact: true,
+    serverComponentsExternalPackages: ['sharp'],
   },
   
-  // Webpack optimizations agresivas
+  // Webpack optimizations más agresivas
   webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
+    // Optimizaciones solo para producción
+    if (!dev) {
       // Optimizaciones de splitting más agresivas
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -47,26 +50,91 @@ const nextConfig = {
             chunks: 'all',
             priority: 5,
           },
-          tailwind: {
-            test: /[\\/]node_modules[\\/](tailwindcss|@tailwindcss)[\\/]/,
-            name: 'tailwind',
+          nextThemes: {
+            test: /[\\/]node_modules[\\/]next-themes[\\/]/,
+            name: 'next-themes',
             chunks: 'all',
             priority: 5,
           },
+          ui: {
+            test: /[\\/]src[\\/]components[\\/]ui[\\/]/,
+            name: 'ui-components',
+            chunks: 'all',
+            priority: 6,
+          },
         },
       };
+      
+      // Optimizaciones adicionales para client-side
+      if (!isServer) {
+        config.resolve.fallback = {
+          ...config.resolve.fallback,
+          fs: false,
+          net: false,
+          tls: false,
+        };
+      }
     }
+    
+    // Optimizaciones de módulos
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack']
+    });
+
+    // Optimización para CSS - evitar syntax errors
+    if (!dev) {
+      config.optimization.minimizer = config.optimization.minimizer || [];
+      
+      // Configuración específica para CSS
+      const cssMinimizer = config.optimization.minimizer.find(
+        minimizer => minimizer.constructor.name === 'CssMinimizerPlugin'
+      );
+      
+      if (cssMinimizer) {
+        cssMinimizer.options = {
+          ...cssMinimizer.options,
+          minimizerOptions: {
+            preset: [
+              'default',
+              {
+                discardComments: { removeAll: true },
+                normalizeCharset: false,
+                // Evitar minificación agresiva que pueda causar syntax errors
+                mergeLonghand: false,
+                mergeRules: false,
+              },
+            ],
+          },
+        };
+      }
+    }
+    
     return config;
   },
   
+  // Configuración de imágenes optimizada
   images: {
-    domains: ['images.unsplash.com', 'assets.aceternity.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.aceternity.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 86400,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    minimumCacheTTL: 86400, // 24 horas
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   

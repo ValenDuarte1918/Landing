@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -22,30 +22,51 @@ export function BeforeAfterComparison({
 }: BeforeAfterProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
+  const updateSliderPosition = useCallback((clientX: number) => {
+    if (!containerRef.current || !isDragging) return;
     
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     setSliderPosition(Math.max(0, Math.min(100, percentage)));
-  };
+  }, [isDragging]);
 
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
-    
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.touches[0].clientX - rect.left;
-    const percentage = (x / rect.width) * 100;
-    setSliderPosition(Math.max(0, Math.min(100, percentage)));
-  };
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      updateSliderPosition(e.clientX);
+    };
 
-  const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
-  
-  const handleTouchStart = () => setIsDragging(true);
-  const handleTouchEnd = () => setIsDragging(false);
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        updateSliderPosition(e.touches[0].clientX);
+      }
+    };
+
+    const handleEnd = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      // Event listeners pasivos para mejor performance
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("touchmove", handleTouchMove, { passive: true });
+      document.addEventListener("mouseup", handleEnd);
+      document.addEventListener("touchend", handleEnd, { passive: true });
+    }
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("mouseup", handleEnd);
+      document.removeEventListener("touchend", handleEnd);
+    };
+  }, [isDragging, updateSliderPosition]);
+
+  const handleStart = () => {
+    setIsDragging(true);
+  };
 
   return (
     <div className="relative bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-btn/30 transition-all duration-500">
@@ -54,14 +75,10 @@ export function BeforeAfterComparison({
         <p className="text-gray-300 mb-6 font-professional">{description}</p>
         
         <div 
+          ref={containerRef}
           className="relative h-96 overflow-hidden rounded-xl cursor-ew-resize select-none touch-none"
-          onMouseMove={handleMouseMove}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onTouchMove={handleTouchMove}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
+          onMouseDown={handleStart}
+          onTouchStart={handleStart}
         >
           {/* Imagen "Después" (fondo) */}
           <Image

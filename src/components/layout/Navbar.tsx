@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   // Throttle scroll para mejor performance
   const handleScroll = useCallback(() => {
@@ -30,21 +32,80 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [handleScroll]);
 
+  // Manejar teclas de escape y navegación
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+      
+      // Trap focus en el menú móvil
+      if (isMenuOpen && event.key === 'Tab') {
+        const focusableElements = menuRef.current?.querySelectorAll(
+          'a, button, [tabindex]:not([tabindex="-1"])'
+        );
+        
+        if (focusableElements && focusableElements.length > 0) {
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+          
+          if (event.shiftKey) {
+            if (document.activeElement === firstElement) {
+              event.preventDefault();
+              lastElement.focus();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              event.preventDefault();
+              firstElement.focus();
+            }
+          }
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isMenuOpen]);
+
   // Cerrar menú al hacer click fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
-      if (isMenuOpen && !target.closest('.navbar-start') && !target.closest('[data-menu-overlay]')) {
+      if (isMenuOpen && 
+          !menuRef.current?.contains(target) && 
+          !menuButtonRef.current?.contains(target)) {
         setIsMenuOpen(false);
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
+    if (isMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+    
     return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMenuOpen]);
+
+  // Manejar body scroll cuando el menú está abierto
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isMenuOpen]);
 
   // Cerrar menú al hacer click en un enlace
   const closeMenu = () => setIsMenuOpen(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const navigation = [
     { name: "Inicio", id: "inicio" },

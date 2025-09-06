@@ -1,5 +1,5 @@
 "use client";
-import React, {Suspense} from "react";
+import React, {Suspense, lazy} from "react";
 import { Container, Hero, SectionTitle, Testimonials } from "@/components";
 import { ScrollAnimation } from "@/components/ui";
 import { 
@@ -7,9 +7,11 @@ import {
   BeforeAfterComparison
 } from "@/components/features";
 import Link from "next/link";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 import { trackEvents } from "@/components/analytics/trackEvents";
 
+// Lazy loading de componentes no críticos
+const LazyImageGallery = lazy(() => import("@/components/features/ImageGallery"));
 
 export default function Home() {
   return (
@@ -18,13 +20,13 @@ export default function Home() {
         <Hero />
         
         {/* Sección Sobre Nosotros Renovada */}
-        <section id="nosotros" className="relative py-20 bg-gray-900">
+        <section id="nosotros" className="relative py-20 bg-gray-900" aria-labelledby="nosotros-heading">
           <Container className="relative z-10">
             {/* Header de la sección - Diseño optimizado */}
             <div className="text-center mb-16">
             <div className="relative max-w-4xl mx-auto">
               {/* Fondo sutil optimizado */}
-              <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-transparent rounded-3xl blur-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-transparent rounded-3xl blur-xl" aria-hidden="true"></div>
               
               <div className="relative p-8 glass-effect rounded-3xl border border-gray-700/30">
                 {/* PreTitle optimizado */}
@@ -33,13 +35,13 @@ export default function Home() {
                 </div>
 
                 {/* Título principal optimizado */}
-                <h2 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6 font-industrial">
+                <h2 id="nosotros-heading" className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6 font-industrial">
                   Tu aliado en{" "}
                   <span className="text-btn">preparación de superficies</span>
                 </h2>
 
                 {/* Línea decorativa simple */}
-                <div className="w-24 h-1 bg-gradient-to-r from-btn to-customBlue rounded-full mx-auto mb-8 animate-fade-in-delayed"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-btn to-customBlue rounded-full mx-auto mb-8 animate-fade-in-delayed" aria-hidden="true"></div>
 
                 {/* Descripción renovada */}
                 <p className="text-lg lg:text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto animate-fade-in-up font-professional">
@@ -53,10 +55,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {/* Lado izquierdo - Historia y valores */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-btn/30 transition-all duration-300">
+              <article className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-btn/30 transition-all duration-300">
                 <div className="flex items-start mb-4">
-                  <div className="w-10 h-10 bg-btn rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-btn rounded-lg flex items-center justify-center mr-4 mt-1" aria-hidden="true">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -69,12 +71,12 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </article>
 
-              <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-btn/30 transition-all duration-300">
+              <article className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-btn/30 transition-all duration-300">
                 <div className="flex items-start mb-4">
-                  <div className="w-10 h-10 bg-customBlue rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-customBlue rounded-lg flex items-center justify-center mr-4 mt-1" aria-hidden="true">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
@@ -86,20 +88,20 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
 
             {/* Lado derecho - Imagen destacada */}
             <div className="lg:col-span-1">
               <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 h-full">
                 <div className="relative h-64 lg:h-full min-h-[300px] rounded-xl overflow-hidden">
-                  <Image 
+                  <OptimizedImage 
                     src="/img/img-sobreNosotros.jpg" 
-                    alt="Equipo profesional trabajando en tratamientos de superficies"
+                    alt="Equipo profesional trabajando en tratamientos de superficies metálicas con equipos especializados"
                     fill
                     className="object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={false}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -208,12 +210,12 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('granallado', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <Image 
+                <OptimizedImage 
                   src="/img/img-arenado.jpg" 
-                  alt="Servicio de Granallado - Preparación de superficies metálicas"
+                  alt="Servicio de Granallado - Preparación de superficies metálicas con equipos especializados"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
+                  lazy={true}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
@@ -247,12 +249,12 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('blasting', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <Image 
+                <OptimizedImage 
                   src="/img/imgTrabajos4.webp" 
-                  alt="Servicio de Blasting - Técnica avanzada de limpieza con abrasivos"
+                  alt="Servicio de Blasting - Técnica avanzada de limpieza con abrasivos y granalla"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
+                  lazy={true}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
@@ -286,12 +288,12 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('zincado', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <Image 
+                <OptimizedImage 
                   src="/img/1.jpg" 
-                  alt="Servicio de Zincado - Recubrimiento protector contra la corrosión"
+                  alt="Servicio de Zincado - Recubrimiento protector anticorrosivo para piezas metálicas"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
+                  lazy={true}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
@@ -325,12 +327,12 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('soldaduras', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <Image 
+                <OptimizedImage 
                   src="/img/img-soldadura.jpg" 
-                  alt="Servicio de Soldaduras Especiales - Soldadura TIG y MIG industrial"
+                  alt="Servicio de Soldaduras Especiales - Soldadura TIG y MIG industrial de precisión"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
+                  lazy={true}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>

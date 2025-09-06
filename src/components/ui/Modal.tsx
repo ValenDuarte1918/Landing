@@ -4,6 +4,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface ModalProps {
   isOpen: boolean;
@@ -97,11 +98,15 @@ export function ImageModal({
         transition={{ duration: 0.3 }}
         className="relative"
       >
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-full h-auto rounded-lg"
-        />
+        <div className="relative w-full h-auto min-h-[400px]">
+          <Image
+            src={imageSrc}
+            alt={imageAlt || "Imagen modal"}
+            fill
+            className="object-contain rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+          />
+        </div>
         <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
           {imageAlt}
         </div>

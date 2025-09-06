@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://arenadosyblasting.com/sitemap.xml
+
+# Crawl-delay for better performance
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /deploy-hostinger*
+Disallow: /*.ps1
+Disallow: /*.sh
+Disallow: /ENV-SETUP.md
+Disallow: /TRACKING-STATUS.md
+
+# Allow specific important pages
+Allow: /servicios/
+Allow: /img/
+
+# Block specific file types that shouldn't be indexed
+Disallow: /*.json$
+Disallow: /*.xml$ 
+Disallow: /*.txt$
+Disallow: /*.log$

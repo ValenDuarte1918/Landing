@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Página principal -->
+  <url>
+    <loc>https://arenadosyblasting.com/</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://arenadosyblasting.com/img/logo-redes.png</image:loc>
+      <image:caption>Arenados y Blasting - Logo de la empresa</image:caption>
+      <image:title>Arenados y Blasting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://arenadosyblasting.com/img/hero3.webp</image:loc>
+      <image:caption>Servicios de tratamiento de superficies metálicas</image:caption>
+      <image:title>Hero - Arenados y Blasting</image:title>
+    </image:image>
+  </url>
+
+  <!-- Servicios -->
+  <url>
+    <loc>https://arenadosyblasting.com/servicios/granallado</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://arenadosyblasting.com/img/imgGranallado.jpg</image:loc>
+      <image:caption>Servicio de granallado profesional</image:caption>
+      <image:title>Granallado - Arenados y Blasting</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://arenadosyblasting.com/servicios/blasting</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://arenadosyblasting.com/img/img-arenado.jpg</image:loc>
+      <image:caption>Servicio de blasting y arenado</image:caption>
+      <image:title>Blasting - Arenados y Blasting</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://arenadosyblasting.com/servicios/soldaduras</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://arenadosyblasting.com/img/img-soldadura.jpg</image:loc>
+      <image:caption>Servicio de soldaduras especializadas</image:caption>
+      <image:title>Soldaduras - Arenados y Blasting</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://arenadosyblasting.com/servicios/zincado</loc>
+    <lastmod>2024-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://arenadosyblasting.com/img/1.jpg</image:loc>
+      <image:caption>Servicio de zincado para protección anticorrosiva</image:caption>
+      <image:title>Zincado - Arenados y Blasting</image:title>
+    </image:image>
+  </url>
+
+</urlset>

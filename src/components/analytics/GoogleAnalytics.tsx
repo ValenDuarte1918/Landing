@@ -7,6 +7,27 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXX
 const GA_DEBUG = process.env.NEXT_PUBLIC_GA_DEBUG === 'true';
 const ANALYTICS_ENABLED = process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true';
 
+// Script para optimizar Google Analytics y evitar touch event violations
+const GA_OPTIMIZATION_SCRIPT = `
+  // Optimización para evitar touch event violations en Google Analytics
+  if (typeof window !== 'undefined') {
+    // Override de addEventListener para hacer touch events pasivos por defecto
+    const originalAddEventListener = EventTarget.prototype.addEventListener;
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+      if (type === 'touchstart' || type === 'touchmove' || type === 'touchend') {
+        if (typeof options === 'boolean') {
+          options = { capture: options, passive: true };
+        } else if (typeof options === 'object' && options !== null) {
+          options = { ...options, passive: true };
+        } else {
+          options = { passive: true };
+        }
+      }
+      return originalAddEventListener.call(this, type, listener, options);
+    };
+  }
+`;
+
 // Función para enviar eventos a GA
 export const gtag = (...args: any[]) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -67,6 +88,9 @@ export function GoogleAnalytics() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
+            ${GA_OPTIMIZATION_SCRIPT}
+            
+            window.dataLayer = window.dataLayer || [];
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());

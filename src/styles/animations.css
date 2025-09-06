@@ -1,10 +1,10 @@
-/* AOS (Animate On Scroll) customizations */
-@import 'aos/dist/aos.css';
+/* Custom animations for industrial theme - Optimizado sin dependencias externas */
 
-/* Custom animations for industrial theme */
+/* Industrial themed animations */
 [data-aos="fade-up-industrial"] {
   transform: translate3d(0, 40px, 0);
   opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 [data-aos="fade-up-industrial"].aos-animate {
@@ -15,6 +15,7 @@
 [data-aos="slide-up-industrial"] {
   transform: translate3d(0, 100px, 0);
   opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 [data-aos="slide-up-industrial"].aos-animate {
@@ -52,6 +53,42 @@
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
 }
 
 @keyframes pulse-slow {
@@ -93,6 +130,46 @@
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="/img/logo2.webp"/>
+            <square150x150logo src="/img/logo2.webp"/>
+            <wide310x150logo src="/img/logo-redes.png"/>
+            <square310x310logo src="/img/logo2.webp"/>
+            <TileColor>#001211</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>

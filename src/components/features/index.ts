@@ -6,4 +6,3 @@ export { ImageGallery } from './ImageGallery';
 export { BeforeAfterComparison } from './BeforeAfterComparison';
 export { ProcessVisualization } from './ProcessVisualization';
 export { default as ServicesShowcase } from './ServicesShowcase';
-export { default as ScrollAnimation, useSmoothScroll, SmoothScrollLink } from './ScrollAnimation';
