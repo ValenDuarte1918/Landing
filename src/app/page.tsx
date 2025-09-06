@@ -6,46 +6,34 @@ import {
   ProcessVisualization, 
   BeforeAfterComparison
 } from "@/components/features";
-import AppleCardsCarouselDemo from "@/components/features/card";
 import Link from "next/link";
+import Image from "next/image";
 import { trackEvents } from "@/components/analytics/trackEvents";
 
 
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-      {/* Elementos animados de fondo */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-customBlue/5 rounded-full blur-xl animate-pulse-slow"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-btn/5 rounded-full blur-lg animate-bounce-slow"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-customBlue/3 rounded-full blur-2xl animate-ping-slow"></div>
-        
-        {/* Partículas flotantes */}
-        <div className="absolute top-1/3 left-1/5 w-2 h-2 bg-customBlue/30 rounded-full animate-float"></div>
-        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-btn/30 rounded-full animate-float-delayed"></div>
-        <div className="absolute bottom-1/3 left-2/3 w-3 h-3 bg-customBlue/20 rounded-full animate-float-slow"></div>
-      </div>
-
       <Container className="relative z-10">
         <Hero />
         
-        {/* Sección Sobre Nosotros Renovada con animaciones */}
-        <section id="nosotros" className="relative py-20 bg-gray-900 animate-fade-in-up">
+        {/* Sección Sobre Nosotros Renovada */}
+        <section id="nosotros" className="relative py-20 bg-gray-900">
           <Container className="relative z-10">
-            {/* Header de la sección - Diseño consistente */}
-            <div className="text-center mb-16 animate-slide-in-up">
-            <div className="relative max-w-4xl mx-auto hover-3d">
-              {/* Fondo sutil consistente */}
+            {/* Header de la sección - Diseño optimizado */}
+            <div className="text-center mb-16">
+            <div className="relative max-w-4xl mx-auto">
+              {/* Fondo sutil optimizado */}
               <div className="absolute inset-0 bg-gradient-to-b from-gray-800/20 to-transparent rounded-3xl blur-xl"></div>
               
               <div className="relative p-8 glass-effect rounded-3xl border border-gray-700/30">
-                {/* PreTitle consistente */}
-                <div className="text-sm font-bold tracking-wider text-btn uppercase mb-6 animate-fade-in-delayed">
+                {/* PreTitle optimizado */}
+                <div className="text-sm font-bold tracking-wider text-btn uppercase mb-6">
                   Sobre Nosotros
                 </div>
 
-                {/* Título principal con el estilo de la página */}
-                <h2 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6 animate-slide-in-up font-industrial">
+                {/* Título principal optimizado */}
+                <h2 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white mb-6 font-industrial">
                   Tu aliado en{" "}
                   <span className="text-btn">preparación de superficies</span>
                 </h2>
@@ -105,10 +93,13 @@ export default function Home() {
             <div className="lg:col-span-1">
               <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 h-full">
                 <div className="relative h-64 lg:h-full min-h-[300px] rounded-xl overflow-hidden">
-                  <img 
+                  <Image 
                     src="/img/img-sobreNosotros.jpg" 
-                    alt="Equipo profesional trabajando"
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    alt="Equipo profesional trabajando en tratamientos de superficies"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -217,10 +208,13 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('granallado', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <Image 
                   src="/img/img-arenado.jpg" 
-                  alt="Servicio de Granallado"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Servicio de Granallado - Preparación de superficies metálicas"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
@@ -253,10 +247,13 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('blasting', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <Image 
                   src="/img/imgTrabajos4.webp" 
-                  alt="Servicio de Blasting"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Servicio de Blasting - Técnica avanzada de limpieza con abrasivos"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
@@ -289,10 +286,13 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('zincado', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <Image 
                   src="/img/1.jpg" 
-                  alt="Servicio de Zincado"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Servicio de Zincado - Recubrimiento protector contra la corrosión"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
@@ -325,10 +325,13 @@ export default function Home() {
               onClick={() => trackEvents.serviceClick('soldaduras', 'homepage')}
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <Image 
                   src="/img/img-soldadura.jpg" 
-                  alt="Servicio de Soldaduras Especiales"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt="Servicio de Soldaduras Especiales - Soldadura TIG y MIG industrial"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">

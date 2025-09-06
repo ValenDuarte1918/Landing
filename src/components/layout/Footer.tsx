@@ -57,7 +57,7 @@ export function Footer() {
                       
             <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
               Empresa familiar con más de{" "}
-              <span className="text-btn font-medium bg-gradient-to-r from-btn to-customBlue bg-clip-text text-transparent">15 años de experiencia</span>
+              <span className="text-btn font-semibold">15 años de experiencia</span>
               <span className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300"> especializada en el tratamiento de superficies metálicas.</span>
             </p>
 

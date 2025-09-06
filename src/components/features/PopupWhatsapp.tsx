@@ -10,9 +10,9 @@ const FloatingButton = () => {
   const [clickCount, setClickCount] = useState(0);
   const [lastClickTime, setLastClickTime] = useState(0);
 
-  // Mostrar el botón después de un pequeño delay
+  // Mostrar el botón después de un delay más largo para no afectar LCP
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -61,6 +61,7 @@ const FloatingButton = () => {
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        aria-label="Contactar por WhatsApp"
         className={`
           relative group
           w-16 h-16 

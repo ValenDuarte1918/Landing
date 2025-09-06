@@ -5,19 +5,109 @@ const nextConfig = {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
   
+  // Configuración de compresión
+  compress: true,
+  
+  // Optimizaciones de rendimiento seguras
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
+    gzipSize: true,
+  },
+  
+  // Webpack optimizations agresivas
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Optimizaciones de splitting más agresivas
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        minSize: 20000,
+        maxSize: 244000,
+        cacheGroups: {
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            priority: -10,
+            chunks: 'all',
+            maxSize: 200000,
+          },
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            name: 'react',
+            chunks: 'all',
+            priority: 10,
+          },
+          framerMotion: {
+            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+            name: 'framer-motion',
+            chunks: 'all',
+            priority: 5,
+          },
+          tailwind: {
+            test: /[\\/]node_modules[\\/](tailwindcss|@tailwindcss)[\\/]/,
+            name: 'tailwind',
+            chunks: 'all',
+            priority: 5,
+          },
+        },
+      };
+    }
+    return config;
+  },
+  
   images: {
     domains: ['images.unsplash.com', 'assets.aceternity.com'],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 86400,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   
-  // Headers de seguridad
+  // Headers de seguridad y cache
   async headers() {
     return [
       {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/img/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
+        source: '/(.*\\.(?:woff2|woff|eot|ttf|otf))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
+          // Cache optimizado para páginas
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, stale-while-revalidate=86400',
+          },
           // Prevenir XSS
           {
             key: 'X-Content-Type-Options',

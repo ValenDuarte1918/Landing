@@ -11,7 +11,15 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: "class",
+  
+  // Configuración para reducir CSS no usado
+  safelist: [
+    'animate-fade-in-up',
+    'animate-slide-in-up', 
+    'animate-float',
+    'glass-effect'
+  ],
   theme: {
     extend: {
       textDecorationThickness: {

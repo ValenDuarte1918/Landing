@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 interface ProcessStep {
   id: number;
@@ -89,12 +88,8 @@ export function ProcessVisualization() {
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-btn via-customBlue to-btn transform -translate-x-1/2"></div>
           
           {processSteps.map((step, index) => (
-            <motion.div
+            <div
               key={step.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
               className={`relative mb-16 lg:mb-24 ${
                 index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8 lg:text-right'
               }`}
@@ -151,7 +146,7 @@ export function ProcessVisualization() {
 
               {/* Punto conector en la línea */}
               <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-btn rounded-full border-4 border-gray-900 shadow-lg"></div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

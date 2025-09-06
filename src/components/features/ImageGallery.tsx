@@ -153,6 +153,7 @@ export function ImageGallery({
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
+              aria-label={`Filtrar galería por categoría: ${category}`}
               className={`px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 transform hover:scale-105 ${
                 selectedCategory === category
                   ? "bg-btn text-white shadow-lg shadow-btn/30 font-professional"

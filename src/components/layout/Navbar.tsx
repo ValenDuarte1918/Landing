@@ -55,7 +55,10 @@ export const Navbar = () => {
 
   return (
     <>
-      <div
+      <nav
+        id="navigation"
+        role="navigation"
+        aria-label="Navegación principal"
         className={`navbar fixed top-0 w-full z-50 h-16 sm:h-20 will-change-transform transition-all duration-300 ease-out ${
           isScrolled 
             ? "bg-customBlue/30 backdrop-blur-md shadow-lg border-b border-white/20 transform translate3d(0,0,0)" 
@@ -69,7 +72,9 @@ export const Navbar = () => {
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="btn btn-ghost text-white hover:bg-white/20 hover:backdrop-blur-sm transition-all duration-200 will-change-transform hover:scale-105"
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -89,12 +94,12 @@ export const Navbar = () => {
         </div>
         
         {/* Logo en desktop - izquierda */}
-        <Link href="/" className=" hover:bg-transparent p-2 hidden lg:flex transition-transform duration-200 hover:scale-105 will-change-transform">
+        <Link href="/" className=" hover:bg-transparent p-2 hidden lg:flex transition-transform duration-200 hover:scale-105 will-change-transform" aria-label="Ir al inicio">
           <Image
             src="/img/logo2.webp"
             width={180}
             height={180}
-            alt="logo"
+            alt="Arenados y Blasting - Logo de la empresa"
             priority
           />
         </Link>
@@ -102,12 +107,12 @@ export const Navbar = () => {
 
       {/* Logo en móvil - centro */}
       <div className="navbar-center lg:hidden">
-        <Link href="/" className=" hover:bg-transparent p-1 transition-transform duration-200 hover:scale-105 will-change-transform">
+        <Link href="/" className=" hover:bg-transparent p-1 transition-transform duration-200 hover:scale-105 will-change-transform" aria-label="Ir al inicio - Logo móvil">
           <Image
             src="/img/logo2.webp"
             width={150}
             height={150}
-            alt="logo"
+            alt="Arenados y Blasting - Logo de la empresa"
             priority
             className="max-h-32 w-auto"
           />
@@ -139,7 +144,7 @@ export const Navbar = () => {
           Presupuestos
         </Link>
       </div>
-      </div>
+      </nav>
 
       {/* Overlay Menu para móvil */}
       {isMenuOpen && (

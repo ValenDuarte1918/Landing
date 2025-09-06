@@ -182,6 +182,7 @@ export const Card = ({
               <button
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
                 onClick={handleClose}
+                aria-label="Cerrar modal de servicio"
               >
                 <XMarkIcon className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
@@ -205,6 +206,7 @@ export const Card = ({
       <motion.button
             layoutId={layout ? `card-${card.title}` : undefined}
             onClick={handleOpen}
+            aria-label={`Ver detalles del servicio: ${card.title}`}
             className="rounded-3xl h-80 w-56 md:h-[22rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10 transition-opacity hover:opacity-40"
           >
             <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
